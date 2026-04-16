@@ -1,0 +1,30 @@
+# Rahul Baberwal - Portfolio Overview
+
+## Identity & Role
+Rahul Baberwal is a Backend Developer & Aspiring Data Scientist.
+He is currently pursuing an MSc in Computer Science at Mohta College, MGSU Bikaner, and an advanced Major in Artificial Intelligence from IIT Ropar.
+He works as a Backend Developer at Groww Per Click.
+
+## Technical Skills
+- **Languages:** Python, JavaScript, HTML5, CSS3, SCSS
+- **Backend Frameworks:** Django, Django REST Framework, FastAPI
+- **Data & AI:** Machine Learning, scikit-learn, Pandas, NumPy, NLP/SBERT
+- **Infrastructure & Tools:** PostgreSQL, Docker, Redis, Celery, Linux, Git, GitHub, GitLab
+
+## Featured Projects
+1. **Movie Explorer AI**: An AI-powered movie recommendation platform with real-time fuzzy search (<150ms), ML personalized suggestions, and multi-language support (FastAPI, Python).
+2. **College Website**: A modern, responsive college institution website built with structured layouts and clean typography (HTML, SCSS).
+3. **Real-time Backend Engine**: A scalable real-time application architecture featuring distributed task queues and live WebSocket updates (Django, Celery, Redis, Channels).
+
+## Education & Experience
+- **Backend Developer @ Groww Per Click** (Aug 2025 – Present)
+- **Major in Artificial Intelligence @ IIT Ropar** (Aug 2024 – Oct 2025)
+- **MSc Computer Science @ Mohta College, MGSU Bikaner** (2024 - Present)
+- **O Level (IT Professional) @ NIELIT** (Jul 2022 – Jan 2024)
+
+## Contact & Links
+- **Email:** rahulbaberwal3@gmail.com
+- **Website/Domain:** https://rahulbaberwal.com
+- **GitHub:** https://github.com/rahul-baberwal
+- **LinkedIn:** https://www.linkedin.com/in/rahul-baberwal/
+- **GitLab:** https://gitlab.com/rahul-baberwal
