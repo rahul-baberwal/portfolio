@@ -3,30 +3,30 @@
 > A professional portfolio of Rahul Baberwal, showcasing expertise in Backend Engineering (Django/FastAPI), Artificial Intelligence (IIT Ropar), and High-Performance Systems.
 
 ## Identity & Role
-Rahul Baberwal is a Backend Developer & Aspiring Data Scientist.
-He is currently pursuing an MSc in Computer Science at Mohta College, MGSU Bikaner, and an advanced Major in Artificial Intelligence from IIT Ropar.
-He works as a Backend Developer at Groww Per Click.
+- Role: Backend Developer & Aspiring Data Scientist
+- Status: Pursuing MSc Computer Science at Mohta College and AI Major at IIT Ropar
+- Current: Backend Developer at Groww Per Click
 
 ## Technical Skills
-- **Languages:** [Python](https://www.python.org/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), HTML5, CSS3, SCSS
-- **Backend Frameworks:** [Django](https://www.djangoproject.com/), [Django REST Framework](https://www.django-rest-framework.org/), [FastAPI](https://fastapi.tiangolo.com/)
-- **Data & AI:** [Machine Learning](https://scikit-learn.org/), [scikit-learn](https://scikit-learn.org/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [NLP/SBERT](https://www.sbert.net/)
-- **Infrastructure & Tools:** [PostgreSQL](https://www.postgresql.org/), [Docker](https://www.docker.com/), [Redis](https://redis.io/), [Celery](https://docs.celeryq.dev/), [Linux](https://www.linux.org/), [Git](https://git-scm.com/)
+- Languages: [Python](https://www.python.org/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), HTML5, CSS3, SCSS
+- Backend Frameworks: [Django](https://www.djangoproject.com/), [Django REST Framework](https://www.django-rest-framework.org/), [FastAPI](https://fastapi.tiangolo.com/)
+- Data & AI: [Machine Learning](https://scikit-learn.org/), [scikit-learn](https://scikit-learn.org/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [NLP/SBERT](https://www.sbert.net/)
+- Infrastructure & Tools: [PostgreSQL](https://www.postgresql.org/), [Docker](https://www.docker.com/), [Redis](https://redis.io/), [Celery](https://docs.celeryq.dev/), [Linux](https://www.linux.org/), [Git](https://git-scm.com/)
 
 ## Featured Projects
-- [EasySpin — Hyperlocal Ecosystem](https://play.google.com/store/apps/details?id=com.easyspinlaundry.user&pcampaignid=web_share): Unified backend orchestrating REST APIs for Customer, Rider, and Store apps with automated logistics.
-- [Movie Explorer AI](https://github.com/rahul-baberwal/Movie-Explorer-Latest): AI-powered movie recommendation platform with real-time fuzzy search and ML personalized suggestions.
-- [College Website](https://github.com/rahul-baberwal/mycollege1): Modern, responsive college institution website built with structured layouts and clean typography.
+- [EasySpin — Hyperlocal Ecosystem](https://play.google.com/store/apps/details?id=com.easyspinlaundry.user&pcampaignid=web_share): Unified backend orchestrating REST APIs for Customer, Rider, and Store apps
+- [Movie Explorer AI](https://github.com/rahul-baberwal/Movie-Explorer-Latest): AI-powered movie recommendation platform with real-time fuzzy search
+- [College Website](https://github.com/rahul-baberwal/mycollege1): Modern, responsive college institution website built with HTML and SCSS
 
 ## Education & Experience
-- [Groww Per Click](https://growwperclick.com/) (Backend Developer)
-- [IIT Ropar](https://www.iitrpr.ac.in/) (Major in Artificial Intelligence)
-- [Mohta College](https://mohtacollege.com/) (MSc Computer Science)
-- [NIELIT](https://www.nielit.gov.in/) (O Level IT Professional)
+- [Groww Per Click](https://growwperclick.com/): Backend Developer
+- [IIT Ropar](https://www.iitrpr.ac.in/): Major in Artificial Intelligence
+- [Mohta College](https://mohtacollege.com/): MSc Computer Science
+- [NIELIT](https://www.nielit.gov.in/): O Level IT Professional
 
 ## Contact & Links
-- [Email](mailto:rahulbaberwal3@gmail.com)
-- [Website](https://rahulbaberwal.com)
-- [GitHub](https://github.com/rahul-baberwal)
-- [LinkedIn](https://www.linkedin.com/in/rahul-baberwal/)
-- [GitLab](https://gitlab.com/rahul-baberwal)
+- [Email](mailto:rahulbaberwal3@gmail.com): Direct contact via email
+- [Website](https://rahulbaberwal.com): Official portfolio domain
+- [GitHub](https://github.com/rahul-baberwal): Source code and open-source contributions
+- [LinkedIn](https://www.linkedin.com/in/rahul-baberwal/): Professional network and profile
+- [GitLab](https://gitlab.com/rahul-baberwal): Additional projects and repositories
