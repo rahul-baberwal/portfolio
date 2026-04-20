@@ -3,14 +3,16 @@
 > A professional portfolio of Rahul Baberwal, showcasing expertise in Backend Engineering (Django/FastAPI), Artificial Intelligence (IIT Ropar), and High-Performance Systems.
 
 ## Identity & Role
-- Role: Backend Developer & Aspiring Data Scientist
-- Status: Pursuing MSc Computer Science at Mohta College and AI Major at IIT Ropar
-- Current: Backend Developer at Groww Per Click
+- [Backend Developer](https://en.wikipedia.org/wiki/Frontend_and_backend) specializing in Django & FastAPI
+- [Data Scientist](https://en.wikipedia.org/wiki/Data_science) focused on Machine Learning & AI
+- [Groww Per Click](https://growwperclick.com/): Current Backend Developer
+- [IIT Ropar](https://www.iitrpr.ac.in/): Artificial Intelligence Major
+- [Mohta College](https://mohtacollege.com/): MSc Computer Science
 
 ## Technical Skills
 - Languages: [Python](https://www.python.org/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), HTML5, CSS3, SCSS
 - Backend Frameworks: [Django](https://www.djangoproject.com/), [Django REST Framework](https://www.django-rest-framework.org/), [FastAPI](https://fastapi.tiangolo.com/)
-- Data & AI: [Machine Learning](https://scikit-learn.org/), [scikit-learn](https://scikit-learn.org/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [NLP/SBERT](https://www.sbert.net/)
+- Data & AI: [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning), [scikit-learn](https://scikit-learn.org/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [NLP](https://en.wikipedia.org/wiki/Natural_language_processing)
 - Infrastructure & Tools: [PostgreSQL](https://www.postgresql.org/), [Docker](https://www.docker.com/), [Redis](https://redis.io/), [Celery](https://docs.celeryq.dev/), [Linux](https://www.linux.org/), [Git](https://git-scm.com/)
 
 ## Featured Projects
@@ -19,14 +21,14 @@
 - [College Website](https://github.com/rahul-baberwal/mycollege1): Modern, responsive college institution website built with HTML and SCSS
 
 ## Education & Experience
-- [Groww Per Click](https://growwperclick.com/): Backend Developer
-- [IIT Ropar](https://www.iitrpr.ac.in/): Major in Artificial Intelligence
-- [Mohta College](https://mohtacollege.com/): MSc Computer Science
-- [NIELIT](https://www.nielit.gov.in/): O Level IT Professional
+- [Professional Career](https://growwperclick.com/): Backend Developer at Groww Per Click
+- [Academic Major](https://www.iitrpr.ac.in/): AI Studies at IIT Ropar
+- [Graduate Studies](https://mohtacollege.com/): MSc in Computer Science
+- [Certification](https://www.nielit.gov.in/): NIELIT O Level IT Professional
 
 ## Contact & Links
 - [Email](mailto:rahulbaberwal3@gmail.com): Direct contact via email
-- [Website](https://rahulbaberwal.com): Official portfolio domain
-- [GitHub](https://github.com/rahul-baberwal): Source code and open-source contributions
-- [LinkedIn](https://www.linkedin.com/in/rahul-baberwal/): Professional network and profile
-- [GitLab](https://gitlab.com/rahul-baberwal): Additional projects and repositories
+- [Domain](https://rahulbaberwal.com): Official portfolio website
+- [GitHub Profile](https://github.com/rahul-baberwal): Project repositories and contributions
+- [LinkedIn Profile](https://www.linkedin.com/in/rahul-baberwal/): Professional networking
+- [GitLab Profile](https://gitlab.com/rahul-baberwal): Additional source code
