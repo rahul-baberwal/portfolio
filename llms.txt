@@ -1,30 +1,32 @@
 # Rahul Baberwal - Portfolio Overview
 
+> A professional portfolio of Rahul Baberwal, showcasing expertise in Backend Engineering (Django/FastAPI), Artificial Intelligence (IIT Ropar), and High-Performance Systems.
+
 ## Identity & Role
 Rahul Baberwal is a Backend Developer & Aspiring Data Scientist.
 He is currently pursuing an MSc in Computer Science at Mohta College, MGSU Bikaner, and an advanced Major in Artificial Intelligence from IIT Ropar.
 He works as a Backend Developer at Groww Per Click.
 
 ## Technical Skills
-- **Languages:** Python, JavaScript, HTML5, CSS3, SCSS
-- **Backend Frameworks:** Django, Django REST Framework, FastAPI
-- **Data & AI:** Machine Learning, scikit-learn, Pandas, NumPy, NLP/SBERT
-- **Infrastructure & Tools:** PostgreSQL, Docker, Redis, Celery, Linux, Git, GitHub, GitLab
+- **Languages:** [Python](https://www.python.org/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), HTML5, CSS3, SCSS
+- **Backend Frameworks:** [Django](https://www.djangoproject.com/), [Django REST Framework](https://www.django-rest-framework.org/), [FastAPI](https://fastapi.tiangolo.com/)
+- **Data & AI:** [Machine Learning](https://scikit-learn.org/), [scikit-learn](https://scikit-learn.org/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [NLP/SBERT](https://www.sbert.net/)
+- **Infrastructure & Tools:** [PostgreSQL](https://www.postgresql.org/), [Docker](https://www.docker.com/), [Redis](https://redis.io/), [Celery](https://docs.celeryq.dev/), [Linux](https://www.linux.org/), [Git](https://git-scm.com/)
 
 ## Featured Projects
-1. **Movie Explorer AI**: An AI-powered movie recommendation platform with real-time fuzzy search (<150ms), ML personalized suggestions, and multi-language support (FastAPI, Python).
-2. **College Website**: A modern, responsive college institution website built with structured layouts and clean typography (HTML, SCSS).
-3. **Real-time Backend Engine**: A scalable real-time application architecture featuring distributed task queues and live WebSocket updates (Django, Celery, Redis, Channels).
+- [EasySpin — Hyperlocal Ecosystem](https://play.google.com/store/apps/details?id=com.easyspinlaundry.user&pcampaignid=web_share): Unified backend orchestrating REST APIs for Customer, Rider, and Store apps with automated logistics.
+- [Movie Explorer AI](https://github.com/rahul-baberwal/Movie-Explorer-Latest): AI-powered movie recommendation platform with real-time fuzzy search and ML personalized suggestions.
+- [College Website](https://github.com/rahul-baberwal/mycollege1): Modern, responsive college institution website built with structured layouts and clean typography.
 
 ## Education & Experience
-- **Backend Developer @ Groww Per Click** (Aug 2025 – Present)
-- **Major in Artificial Intelligence @ IIT Ropar** (Aug 2024 – Oct 2025)
-- **MSc Computer Science @ Mohta College, MGSU Bikaner** (2024 - Present)
-- **O Level (IT Professional) @ NIELIT** (Jul 2022 – Jan 2024)
+- [Groww Per Click](https://growwperclick.com/) (Backend Developer)
+- [IIT Ropar](https://www.iitrpr.ac.in/) (Major in Artificial Intelligence)
+- [Mohta College](https://mohtacollege.com/) (MSc Computer Science)
+- [NIELIT](https://www.nielit.gov.in/) (O Level IT Professional)
 
 ## Contact & Links
-- **Email:** rahulbaberwal3@gmail.com
-- **Website/Domain:** https://rahulbaberwal.com
-- **GitHub:** https://github.com/rahul-baberwal
-- **LinkedIn:** https://www.linkedin.com/in/rahul-baberwal/
-- **GitLab:** https://gitlab.com/rahul-baberwal
+- [Email](mailto:rahulbaberwal3@gmail.com)
+- [Website](https://rahulbaberwal.com)
+- [GitHub](https://github.com/rahul-baberwal)
+- [LinkedIn](https://www.linkedin.com/in/rahul-baberwal/)
+- [GitLab](https://gitlab.com/rahul-baberwal)
