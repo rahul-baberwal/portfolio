@@ -1,19 +1,24 @@
 {
-    "name": "Rahul Baberwal Portfolio",
-    "short_name": "RB Portfolio",
+    "name": "Rahul Baberwal",
+    "short_name": "Rahul Baberwal",
+    "description": "Portfolio of Rahul Baberwal, Backend Developer & AI Enthusiast.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#0a0a0f",
+    "theme_color": "#0a0a0f",
+    "orientation": "portrait-primary",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
             "src": "android-chrome-512x512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
-    ],
-    "theme_color": "#0a0a0f",
-    "background_color": "#0a0a0f",
-    "display": "standalone"
+    ]
 }
