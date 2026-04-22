@@ -4,7 +4,7 @@ const ASSETS_TO_CACHE = [
   '/index.html',
   '/style.css',
   '/script.js',
-  '/profile.png',
+  '/profile.webp',
   '/favicon/site.webmanifest',
   '/favicon/favicon-32x32.png',
   '/favicon/favicon-16x16.png',
