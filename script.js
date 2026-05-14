@@ -185,7 +185,7 @@ const gitLines = {
   contact: [
     { text: "git checkout contact",          cls: "dim",    prompt: true  },
     { text: "Switched to branch 'contact'",  cls: "ok"                   },
-    { text: "remote: rahulbaberwal3@gmail.com", cls: "info"               },
+    { text: "remote: im@rahulbaberwal.com", cls: "info"               },
     { text: "→ Opening communication channel...", cls: "arrow"            },
   ],
 };
@@ -351,12 +351,12 @@ const socialScripts = {
   },
   email: {
     match: /mailto:/,
-    url: 'mailto:rahulbaberwal3@gmail.com',
+    url: 'mailto:im@rahulbaberwal.com',
     lines: [
-      { text: 'mail -s "Hello Rahul" rahulbaberwal3@gmail.com',          cls: 'dim',   prompt: true },
-      { text: 'Resolving MX for gmail.com... done',                       cls: 'info' },
-      { text: 'SMTP: connected to smtp.gmail.com:587',                    cls: 'ok'   },
-      { text: 'To: rahulbaberwal3@gmail.com',                             cls: 'branch' },
+      { text: 'mail -s "Hello Rahul" im@rahulbaberwal.com',          cls: 'dim',   prompt: true },
+      { text: 'Resolving MX for rahulbaberwal.com... done',                       cls: 'info' },
+      { text: 'SMTP: connected to mx.rahulbaberwal.com:587',                    cls: 'ok'   },
+      { text: 'To: im@rahulbaberwal.com',                             cls: 'branch' },
       { text: 'Status: READY TO SEND',                                    cls: 'ok'   },
       { text: '→ Launching mail client...',                               cls: 'arrow' },
     ],
