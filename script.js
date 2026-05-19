@@ -349,6 +349,17 @@ const socialScripts = {
       { text: '→ Opening LinkedIn profile...',                            cls: 'arrow' },
     ],
   },
+  facebook: {
+    match: /facebook\.com/,
+    url: 'https://www.facebook.com/rahulbaberwal.in/',
+    lines: [
+      { text: 'curl -sI https://facebook.com/rahulbaberwal.in/',          cls: 'dim',   prompt: true },
+      { text: 'HTTP/2 200 OK',                                            cls: 'ok'   },
+      { text: 'content-type: text/html; charset=utf-8',                  cls: 'info' },
+      { text: 'x-profile: rahulbaberwal.in | Facebook Page',              cls: 'branch' },
+      { text: '→ Opening Facebook profile...',                            cls: 'arrow' },
+    ],
+  },
   email: {
     match: /mailto:/,
     url: 'mailto:im@rahulbaberwal.com',
@@ -821,6 +832,10 @@ ctxMenu.querySelectorAll('.ctx-item').forEach(btn => {
 
       case 'linkedin':
         runSocialTerminal(socialScripts.linkedin);
+        break;
+
+      case 'facebook':
+        runSocialTerminal(socialScripts.facebook);
         break;
 
       case 'email':
