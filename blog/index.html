@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ SEO & SMO Optimization -->
+  <title>Blog | Rahul Baberwal - Python Backend & AI Engineer</title>
+  <meta name="description" content="Read articles by Rahul Baberwal on Python backend development, Django, FastAPI, Celery, Redis, machine learning, and DevOps." />
+  <meta name="keywords" content="Rahul Baberwal Blog, Django, Celery, Redis, DevOps, Backend Development, Python, FastAPI, Machine Learning, IIT Ropar, Software Engineering" />
+  <meta name="author" content="Rahul Baberwal" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rahulbaberwal.com/blog/" />
+  
+  <!-- ✅ Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rahulbaberwal.com/blog/" />
+  <meta property="og:site_name" content="Rahul Baberwal Blog" />
+  <meta property="og:title" content="Blog | Rahul Baberwal - Python Backend & AI Engineer" />
+  <meta property="og:description" content="Technical articles on Django, Celery, Redis, DevOps, Python backend development, and Machine Learning." />
+  <meta property="og:image" content="https://rahulbaberwal.com/og-image/og-banner_facebook_og_1200x630.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- ✅ Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://rahulbaberwal.com/blog/" />
+  <meta name="twitter:title" content="Blog | Rahul Baberwal - Python Backend & AI Engineer" />
+  <meta name="twitter:description" content="Technical articles on Django, Celery, Redis, DevOps, Python backend development, and Machine Learning." />
+  <meta name="twitter:image" content="https://rahulbaberwal.com/og-image/og-banner_twitter_x_1200x675.webp" />
+
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+
+  <meta name="theme-color" content="#0a0a0f" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <link rel="shortcut icon" href="../favicon/favicon.ico">
+  
+  <!-- PWA meta tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Rahul Baberwal">
+  
+  <link rel="stylesheet" href="../style.css" />
+  
+  <script>
+    // ─── THEME CONFIG (Early Load) ──────────────────────────────────────────
+    window.themes = [
+      { // 0: Original
+        '--accent': '#6c63ff', '--accent2': '#ff6584', '--accent3': '#43e97b',
+        '--bg': '#0a0a0f', '--bg2': '#111118', '--bg3': '#16161f',
+        '--text': '#f0f0fa', '--text2': '#9999bb', '--text3': '#555577',
+        '--border': 'rgba(108, 99, 255, 0.15)', '--card': 'rgba(22, 22, 31, 0.8)',
+        '--glow': 'rgba(108, 99, 255, 0.3)',
+      },
+      { // 1: Cyberpunk
+        '--accent': '#00f5d4', '--accent2': '#f72585', '--accent3': '#fee440',
+        '--bg': '#04040a', '--bg2': '#080813', '--bg3': '#0d0d1c',
+        '--text': '#e8f8ff', '--text2': '#80c8cc', '--text3': '#3a666a',
+        '--border': 'rgba(0, 245, 212, 0.15)', '--card': 'rgba(8, 8, 22, 0.85)',
+        '--glow': 'rgba(0, 245, 212, 0.3)',
+      },
+      { // 2: Aurora
+        '--accent': '#10b981', '--accent2': '#8b5cf6', '--accent3': '#f59e0b',
+        '--bg': '#030a06', '--bg2': '#060f0a', '--bg3': '#0a1a10',
+        '--text': '#ecfdf5', '--text2': '#6ee7b7', '--text3': '#2d6a4f',
+        '--border': 'rgba(16, 185, 129, 0.15)', '--card': 'rgba(6, 15, 10, 0.85)',
+        '--glow': 'rgba(16, 185, 129, 0.3)',
+      },
+      { // 3: Solar Flare
+        '--accent': '#f97316', '--accent2': '#ef4444', '--accent3': '#fbbf24',
+        '--bg': '#0c0700', '--bg2': '#180e00', '--bg3': '#1f1200',
+        '--text': '#fff7ed', '--text2': '#fcd34d', '--text3': '#7c4700',
+        '--border': 'rgba(249, 115, 22, 0.15)', '--card': 'rgba(24, 14, 0, 0.85)',
+        '--glow': 'rgba(249, 115, 22, 0.3)',
+      },
+      { // 4: Ice Storm
+        '--accent': '#38bdf8', '--accent2': '#c084fc', '--accent3': '#a7f3d0',
+        '--bg': '#020b14', '--bg2': '#041322', '--bg3': '#071a2e',
+        '--text': '#f0f9ff', '--text2': '#7dd3fc', '--text3': '#1e4c6e',
+        '--border': 'rgba(56, 189, 248, 0.15)', '--card': 'rgba(4, 19, 34, 0.85)',
+        '--glow': 'rgba(56, 189, 248, 0.3)',
+      }
+    ];
+
+    window.applyTheme = function(index) {
+      const theme = window.themes[index];
+      const root = document.documentElement;
+      Object.keys(theme).forEach(key => root.style.setProperty(key, theme[key]));
+      window.currentThemeIndex = index;
+      localStorage.setItem('selected-theme', index);
+    };
+
+    // Load saved theme or pick a random one
+    const savedTheme = localStorage.getItem('selected-theme');
+    const themeIdx = savedTheme !== null ? parseInt(savedTheme, 10) : Math.floor(Math.random() * window.themes.length);
+    window.applyTheme(themeIdx);
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Clarity tracking code for https://rahulbaberwal.com/ -->
+  <script>
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "wdk99rkqgx");
+  </script>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
+
+<!-- Linux Terminal Overlay (branding persistence) -->
+<div id="terminal-overlay">
+  <div id="terminal-window">
+    <div id="terminal-titlebar">
+      <div class="term-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <span class="term-title">rahul-baberwal@portfolio — bash</span>
+    </div>
+    <div id="terminal-body">
+      <div id="terminal-output"></div>
+      <div id="terminal-prompt-line">
+        <span class="term-user">rahul-baberwal<span class="term-at">@</span>portfolio</span><span class="term-colon">:</span><span class="term-path">~/website</span><span class="term-dollar">$</span>
+        <span id="terminal-cmd"></span><span class="term-cursor">█</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Custom Context Menu -->
+<div id="ctx-menu">
+  <div class="ctx-header">
+    <span class="ctx-logo">rb<span>.</span></span>
+    <span class="ctx-version">v1.0 · blog</span>
+  </div>
+  <div class="ctx-separator"></div>
+
+  <button class="ctx-item" data-action="top">
+    <span class="ctx-icon"><i class="fa-solid fa-arrow-up"></i></span>
+    <span class="ctx-label">Scroll to Top</span>
+    <span class="ctx-hint">Home</span>
+  </button>
+  <button class="ctx-item" data-action="theme">
+    <span class="ctx-icon"><i class="fa-solid fa-palette"></i></span>
+    <span class="ctx-label">Change Theme</span>
+    <span class="ctx-hint">Shake</span>
+  </button>
+  <div class="ctx-separator"></div>
+
+  <button class="ctx-item" data-action="github">
+    <span class="ctx-icon ctx-github">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </span>
+    <span class="ctx-label">GitHub</span>
+    <span class="ctx-hint"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+  </button>
+  <button class="ctx-item" data-action="linkedin">
+    <span class="ctx-icon ctx-linkedin">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </span>
+    <span class="ctx-label">LinkedIn</span>
+    <span class="ctx-hint"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+  </button>
+  <button class="ctx-item" data-action="email">
+    <span class="ctx-icon"><i class="fa-solid fa-envelope"></i></span>
+    <span class="ctx-label">Send Email</span>
+    <span class="ctx-hint"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+  </button>
+  <div class="ctx-separator"></div>
+  <button class="ctx-item" data-action="source">
+    <span class="ctx-icon"><i class="fa-solid fa-code"></i></span>
+    <span class="ctx-label">View Source</span>
+    <span class="ctx-hint">Dev</span>
+  </button>
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-logo">rb<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="../#about">about</a></li>
+    <li><a href="../#skills">skills</a></li>
+    <li><a href="../#projects">projects</a></li>
+    <li><a href="../#experience">experience</a></li>
+    <li><a href="../#contact">contact</a></li>
+    <li><a href="./" style="color: var(--accent);">blog</a></li>
+  </ul>
+  <!-- Hamburger — only visible on mobile -->
+  <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu">
+  <ul class="mobile-links">
+    <li><a href="../#about">about</a></li>
+    <li><a href="../#skills">skills</a></li>
+    <li><a href="../#projects">projects</a></li>
+    <li><a href="../#experience">experience</a></li>
+    <li><a href="../#contact">contact</a></li>
+    <li><a href="./">blog</a></li>
+  </ul>
+  <div class="mobile-socials">
+    <a href="https://github.com/rahul-baberwal" target="_blank" class="social-link" title="GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/rahul-baberwal/" target="_blank" class="social-link" title="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="mailto:im@rahulbaberwal.com" class="social-link" title="Email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="blog-hero">
+  <div class="section-label">Tech Articles</div>
+  <h1 class="section-title">The Engineering Blog</h1>
+  <p class="blog-hero-desc">
+    Deep dives into Python backend development, asynchronous systems, distributed task queues, machine learning pipelines, and production DevOps strategies.
+  </p>
+</header>
+
+<!-- Main Container -->
+<main class="blog-container">
+  <div class="blog-grid">
+    
+    <!-- Blog Card 1 -->
+    <a href="./django-celery-redis/" class="blog-card reveal">
+      <div class="blog-card-meta">
+        <span class="date">May 19, 2026</span>
+        <span>·</span>
+        <span>12 min read</span>
+      </div>
+      <h2 class="blog-card-title">Production-Ready Django, Celery, and Redis: The Definitive Guide to Scaling Background Tasks</h2>
+      <p class="blog-card-excerpt">
+        Learn how to configure, optimize, and deploy a robust asynchronous task execution system using Django, Celery, and Redis. This deep dive covers task idempotency, database transaction safety patterns, retries with exponential backoff, connection pooling, and Supervisor process controls.
+      </p>
+      <div class="blog-card-tags">
+        <span class="blog-card-tag">Django</span>
+        <span class="blog-card-tag">Celery</span>
+        <span class="blog-card-tag">Redis</span>
+        <span class="blog-card-tag">DevOps</span>
+      </div>
+      <div class="blog-card-link">
+        Read Article
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <span>© <script>document.write(new Date().getFullYear())</script> Rahul Baberwal — rahulbaberwal.com</span>
+  <span style="font-family:'DM Mono',monospace;">Built with <i class="fa-solid fa-heart" style="color:var(--accent2); font-size: 0.8rem; margin: 0 2px;"></i> by Rahul Baberwal</span>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
