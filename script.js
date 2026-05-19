@@ -127,6 +127,7 @@ let roleIndex = 0, charIndex = 0, deleting = false;
 const typer = document.getElementById('typewriter');
 
 function type() {
+  if (!typer) return;
   const current = roles[roleIndex];
   if (!deleting) {
     typer.textContent = current.slice(0, charIndex + 1);
@@ -146,7 +147,10 @@ function type() {
   }
   setTimeout(type, deleting ? 50 : 80);
 }
-type();
+if (typer) {
+  type();
+}
+
 
 // ─── Linux Terminal Navigation ────────────────────────────────────────────────
 

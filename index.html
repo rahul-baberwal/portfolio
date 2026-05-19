@@ -133,13 +133,15 @@
       const root = document.documentElement;
       Object.keys(theme).forEach(key => root.style.setProperty(key, theme[key]));
       window.currentThemeIndex = index;
+      localStorage.setItem('selected-theme', index);
     };
 
-    // Pick a random theme IMMEDIATELY
-    const randomIdx = Math.floor(Math.random() * window.themes.length);
-    window.applyTheme(randomIdx);
+    // Load saved theme or pick a random one
+    const savedTheme = localStorage.getItem('selected-theme');
+    const themeIdx = savedTheme !== null ? parseInt(savedTheme, 10) : Math.floor(Math.random() * window.themes.length);
+    window.applyTheme(themeIdx);
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   
   <!-- Clarity tracking code for https://rahulbaberwal.com/ -->
@@ -254,6 +256,7 @@
     <li><a href="#projects">projects</a></li>
     <li><a href="#experience">experience</a></li>
     <li><a href="#contact">contact</a></li>
+    <li><a href="./blog/">blog</a></li>
   </ul>
   <!-- Hamburger — only visible on mobile -->
   <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -271,6 +274,7 @@
     <li><a href="#projects">projects</a></li>
     <li><a href="#experience">experience</a></li>
     <li><a href="#contact">contact</a></li>
+    <li><a href="./blog/">blog</a></li>
   </ul>
   <div class="mobile-socials">
     <a href="https://github.com/rahul-baberwal" target="_blank" class="social-link" title="GitHub">
