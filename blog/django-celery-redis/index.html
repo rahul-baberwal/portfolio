@@ -115,6 +115,39 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "wdk99rkqgx");
   </script>
+  <!-- SEO FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you prevent race conditions when dispatching Celery tasks in Django?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To prevent race conditions, do not enqueue Celery tasks within an active database transaction. Instead, use Django's transaction.on_commit() hook to dispatch the tasks only after the transaction has been successfully committed to the database."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is task idempotency and why is it important?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An idempotent task produces the same result whether it runs once or multiple times. This is vital in distributed systems to prevent critical duplicate actions, such as charging a customer twice, if a task is retried due to broker delivery duplicates or worker crashes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you mitigate memory leaks in production Celery workers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In production, Celery workers can be configured to auto-restart after executing a certain number of tasks using the --max-tasks-per-child option, or based on memory usage limits using --max-memory-per-child, to mitigate RAM bloat and memory leaks."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -231,6 +264,15 @@
   </a>
   <a href="#" class="share-btn facebook" id="sidebarFacebookShare" title="Share on Facebook">
     <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <a href="#" class="share-btn reddit" id="sidebarRedditShare" title="Share on Reddit">
+    <i class="fa-brands fa-reddit-alien"></i>
+  </a>
+  <a href="#" class="share-btn quora" id="sidebarQuoraShare" title="Share on Quora">
+    <i class="fa-brands fa-quora"></i>
+  </a>
+  <a href="#" class="share-btn dev" id="sidebarDevShare" title="Share on DEV.to">
+    <i class="fa-brands fa-dev"></i>
   </a>
   <button class="share-btn copy" id="sidebarCopyShare" title="Copy Article URL">
     <i class="fa-solid fa-link"></i>
@@ -683,6 +725,18 @@ celery -A myproject flower --port=5555 --basic_auth=admin:gR0wwPerCl1ck!
         <i class="fa-brands fa-facebook-f"></i>
         <span>Facebook</span>
       </a>
+      <a href="#" class="share-btn reddit" id="bottomRedditShare">
+        <i class="fa-brands fa-reddit-alien"></i>
+        <span>Reddit</span>
+      </a>
+      <a href="#" class="share-btn quora" id="bottomQuoraShare">
+        <i class="fa-brands fa-quora"></i>
+        <span>Quora</span>
+      </a>
+      <a href="#" class="share-btn dev" id="bottomDevShare">
+        <i class="fa-brands fa-dev"></i>
+        <span>DEV.to</span>
+      </a>
       <button class="share-btn copy" id="bottomCopyShare">
         <i class="fa-solid fa-link"></i>
         <span>Copy Link</span>
@@ -789,7 +843,9 @@ celery -A myproject flower --port=5555 --basic_auth=admin:gR0wwPerCl1ck!
     // ─── SHARE BUTTONS HANDLERS ─────────────────────────────────────────────────
     const articleUrl = encodeURIComponent(window.location.href);
     const articleTitle = encodeURIComponent("Production-Ready Django, Celery, and Redis: Scaling Background Tasks");
-    const articleTwitterDesc = encodeURIComponent("Check out this production-ready guide to scaling background tasks using Django, Celery, and Redis by @rahulbaberwal");
+    const articleDescription = encodeURIComponent("Optimize and deploy a robust asynchronous task execution system using Django, Celery, and Redis. Protect metrics and handle scale.");
+    const articleTags = "Django,Celery,Redis,DevOps,Python,Backend";
+    const articleTwitterDesc = encodeURIComponent("Check out this guide to scaling background tasks using Django, Celery, and Redis by @rahulbaberwal");
 
     // Helper to wire up share link
     const setupShare = (elementId, url) => {
@@ -803,8 +859,8 @@ celery -A myproject flower --port=5555 --basic_auth=admin:gR0wwPerCl1ck!
     };
 
     // Twitter / X
-    setupShare('bottomTwitterShare', `https://twitter.com/intent/tweet?url=${articleUrl}&text=${articleTwitterDesc}`);
-    setupShare('sidebarTwitterShare', `https://twitter.com/intent/tweet?url=${articleUrl}&text=${articleTwitterDesc}`);
+    setupShare('bottomTwitterShare', `https://twitter.com/intent/tweet?url=${articleUrl}&text=${articleTitle}%20-%20${articleDescription}&hashtags=${articleTags}`);
+    setupShare('sidebarTwitterShare', `https://twitter.com/intent/tweet?url=${articleUrl}&text=${articleTitle}%20-%20${articleDescription}&hashtags=${articleTags}`);
 
     // LinkedIn
     setupShare('bottomLinkedinShare', `https://www.linkedin.com/sharing/share-offsite/?url=${articleUrl}`);
@@ -813,6 +869,18 @@ celery -A myproject flower --port=5555 --basic_auth=admin:gR0wwPerCl1ck!
     // Facebook
     setupShare('bottomFacebookShare', `https://www.facebook.com/sharer/sharer.php?u=${articleUrl}`);
     setupShare('sidebarFacebookShare', `https://www.facebook.com/sharer/sharer.php?u=${articleUrl}`);
+
+    // Reddit
+    setupShare('bottomRedditShare', `https://reddit.com/submit?url=${articleUrl}&title=${articleTitle}%20-%20${articleDescription}%20%23${articleTags.replace(/,/g, '%20%23')}`);
+    setupShare('sidebarRedditShare', `https://reddit.com/submit?url=${articleUrl}&title=${articleTitle}%20-%20${articleDescription}%20%23${articleTags.replace(/,/g, '%20%23')}`);
+
+    // Quora
+    setupShare('bottomQuoraShare', `https://www.quora.com/share?url=${articleUrl}&title=${articleTitle}`);
+    setupShare('sidebarQuoraShare', `https://www.quora.com/share?url=${articleUrl}&title=${articleTitle}`);
+
+    // DEV.to
+    setupShare('bottomDevShare', `https://dev.to/new?prefill_url=${articleUrl}&title=${articleTitle}&tags=${articleTags}`);
+    setupShare('sidebarDevShare', `https://dev.to/new?prefill_url=${articleUrl}&title=${articleTitle}&tags=${articleTags}`);
 
     // Copy Link functionality
     const handleCopyLink = (btn) => {

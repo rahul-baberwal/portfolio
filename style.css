@@ -2133,6 +2133,21 @@ footer {
   border-color: #1877f2;
 }
 
+.share-btn.reddit:hover {
+  background: #ff4500;
+  border-color: #ff4500;
+}
+
+.share-btn.quora:hover {
+  background: #b92b27;
+  border-color: #b92b27;
+}
+
+.share-btn.dev:hover {
+  background: #000000;
+  border-color: #333333;
+}
+
 .share-btn.copy:hover {
   background: var(--accent);
   border-color: var(--accent);

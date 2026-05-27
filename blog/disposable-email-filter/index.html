@@ -115,6 +115,39 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "wdk99rkqgx");
   </script>
+  <!-- SEO FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why do disposable emails hurt website SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Disposable emails cause high email bounce rates, which flags your sending domain and degrades your email deliverability/sender score. They also allow automated spam bots to sign up and post junk links on forums or comments, leading to search engine penalties for hosting low-quality outbound links."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between local blocklists and API validators for email filtering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Local blocklists perform instant checks with zero latency, require no budget or external calls, but must be updated periodically. API validators provide real-time accuracy and catch newly created throwaway domains instantly, but introduce latency and transaction costs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can you update local disposable email lists automatically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can implement a cached JSON strategy that fetches domain registries from community-maintained databases (such as Github repositories) asynchronously via a daily cron job or Celery task to keep your blocklist current."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -231,6 +264,15 @@
   </a>
   <a href="#" class="share-btn facebook" id="sidebarFacebookShare" title="Share on Facebook">
     <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <a href="#" class="share-btn reddit" id="sidebarRedditShare" title="Share on Reddit">
+    <i class="fa-brands fa-reddit-alien"></i>
+  </a>
+  <a href="#" class="share-btn quora" id="sidebarQuoraShare" title="Share on Quora">
+    <i class="fa-brands fa-quora"></i>
+  </a>
+  <a href="#" class="share-btn dev" id="sidebarDevShare" title="Share on DEV.to">
+    <i class="fa-brands fa-dev"></i>
   </a>
   <button class="share-btn copy" id="sidebarCopyShare" title="Copy Article URL">
     <i class="fa-solid fa-link"></i>
@@ -531,6 +573,18 @@ class SelfUpdatingEmailFilter:
         <i class="fa-brands fa-facebook-f"></i>
         <span>Facebook</span>
       </a>
+      <a href="#" class="share-btn reddit" id="bottomRedditShare">
+        <i class="fa-brands fa-reddit-alien"></i>
+        <span>Reddit</span>
+      </a>
+      <a href="#" class="share-btn quora" id="bottomQuoraShare">
+        <i class="fa-brands fa-quora"></i>
+        <span>Quora</span>
+      </a>
+      <a href="#" class="share-btn dev" id="bottomDevShare">
+        <i class="fa-brands fa-dev"></i>
+        <span>DEV.to</span>
+      </a>
       <button class="share-btn copy" id="bottomCopyShare">
         <i class="fa-solid fa-link"></i>
         <span>Copy Link</span>
@@ -624,6 +678,8 @@ class SelfUpdatingEmailFilter:
     // ─── SHARE BUTTONS HANDLERS ─────────────────────────────────────────────────
     const articleUrl = encodeURIComponent(window.location.href);
     const articleTitle = encodeURIComponent("Filtering Disposable & Temporary Emails: A Guide to Clean Leads and Better SEO");
+    const articleDescription = encodeURIComponent("Protect your domain reputation, metrics, and SEO authority. A deep dive into temporary email filters and implementation libraries.");
+    const articleTags = "WebSecurity,SEO,Backend,LeadGen,WebDev";
     const articleTwitterDesc = encodeURIComponent("Check out this guide to filtering disposable and temporary email addresses for better SEO & lead generation by @rahulbaberwal");
 
     const setupShare = (elementId, url) => {
@@ -637,10 +693,22 @@ class SelfUpdatingEmailFilter:
     };
 
     // Bottom Share Links
-    setupShare('bottomTwitterShare', `https://twitter.com/intent/tweet?text=${articleTwitterDesc}&url=${articleUrl}`);
+    setupShare('bottomTwitterShare', `https://twitter.com/intent/tweet?url=${articleUrl}&text=${articleTitle}%20-%20${articleDescription}&hashtags=${articleTags}`);
     setupShare('bottomLinkedinShare', `https://www.linkedin.com/sharing/share-offsite/?url=${articleUrl}`);
     setupShare('bottomFacebookShare', `https://www.facebook.com/sharer/sharer.php?u=${articleUrl}`);
     
+    // Reddit
+    setupShare('bottomRedditShare', `https://reddit.com/submit?url=${articleUrl}&title=${articleTitle}%20-%20${articleDescription}%20%23${articleTags.replace(/,/g, '%20%23')}`);
+    setupShare('sidebarRedditShare', `https://reddit.com/submit?url=${articleUrl}&title=${articleTitle}%20-%20${articleDescription}%20%23${articleTags.replace(/,/g, '%20%23')}`);
+
+    // Quora
+    setupShare('bottomQuoraShare', `https://www.quora.com/share?url=${articleUrl}&title=${articleTitle}`);
+    setupShare('sidebarQuoraShare', `https://www.quora.com/share?url=${articleUrl}&title=${articleTitle}`);
+
+    // DEV.to
+    setupShare('bottomDevShare', `https://dev.to/new?prefill_url=${articleUrl}&title=${articleTitle}&tags=${articleTags}`);
+    setupShare('sidebarDevShare', `https://dev.to/new?prefill_url=${articleUrl}&title=${articleTitle}&tags=${articleTags}`);
+
     const copyBtn = document.getElementById('bottomCopyShare');
     if (copyBtn) {
       copyBtn.addEventListener('click', () => {
@@ -653,7 +721,7 @@ class SelfUpdatingEmailFilter:
     }
 
     // Sidebar Share Links (Floating Widget)
-    setupShare('sidebarTwitterShare', `https://twitter.com/intent/tweet?text=${articleTwitterDesc}&url=${articleUrl}`);
+    setupShare('sidebarTwitterShare', `https://twitter.com/intent/tweet?url=${articleUrl}&text=${articleTitle}%20-%20${articleDescription}&hashtags=${articleTags}`);
     setupShare('sidebarLinkedinShare', `https://www.linkedin.com/sharing/share-offsite/?url=${articleUrl}`);
     setupShare('sidebarFacebookShare', `https://www.facebook.com/sharer/sharer.php?u=${articleUrl}`);
 
