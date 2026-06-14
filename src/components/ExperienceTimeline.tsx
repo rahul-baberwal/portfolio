@@ -74,6 +74,7 @@ export default function ExperienceTimeline() {
               key={exp.id}
               className={`tl-item ${isEven ? 'tl-left' : 'tl-right'} ${visible[i] ? 'tl-visible' : ''}`}
               ref={(el) => { itemRefs.current[i] = el; }}
+              style={{ '--tl-index': i } as React.CSSProperties}
             >
               {/* Connector line from card to center */}
               <div className="tl-connector" />

@@ -37,13 +37,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [pathname]);
 
-  const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
-    e.preventDefault();
+  const handleNavClick = () => {
     setMobileMenuOpen(false);
-    const el = document.getElementById(sectionId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
   };
 
   const handleBlogClick = () => {
@@ -59,49 +54,49 @@ export default function Navbar() {
       {/* Desktop Links */}
       <ul className="nav-links hidden md:flex">
         <li>
-          <a
-            href="#about"
-            onClick={(e) => handleNavClick(e, 'about')}
+          <Link
+            href="/#about"
+            onClick={handleNavClick}
             style={{ color: activeSection === 'about' ? 'var(--accent)' : '' }}
           >
             about
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#skills"
-            onClick={(e) => handleNavClick(e, 'skills')}
+          <Link
+            href="/#skills"
+            onClick={handleNavClick}
             style={{ color: activeSection === 'skills' ? 'var(--accent)' : '' }}
           >
             skills
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#projects"
-            onClick={(e) => handleNavClick(e, 'projects')}
+          <Link
+            href="/#projects"
+            onClick={handleNavClick}
             style={{ color: activeSection === 'projects' ? 'var(--accent)' : '' }}
           >
             projects
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#experience"
-            onClick={(e) => handleNavClick(e, 'experience')}
+          <Link
+            href="/#experience"
+            onClick={handleNavClick}
             style={{ color: activeSection === 'experience' ? 'var(--accent)' : '' }}
           >
             experience
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, 'contact')}
+          <Link
+            href="/#contact"
+            onClick={handleNavClick}
             style={{ color: activeSection === 'contact' ? 'var(--accent)' : '' }}
           >
             contact
-          </a>
+          </Link>
         </li>
         <li>
           <Link
@@ -127,33 +122,47 @@ export default function Navbar() {
         <span></span>
       </button>
 
+      {/* Mobile Backdrop */}
+      {mobileMenuOpen && (
+        <div 
+          className="mobile-backdrop"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
       {/* Mobile Drawer */}
       <div id="mobile-menu" className={`${mobileMenuOpen ? 'open' : ''}`}>
         <ul className="mobile-links">
           <li>
-            <a href="#about" onClick={(e) => handleNavClick(e, 'about')}>
+            <Link href="/" onClick={handleNavClick}>
+              home
+            </Link>
+          </li>
+          <li>
+            <Link href="/#about" onClick={handleNavClick}>
               about
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#skills" onClick={(e) => handleNavClick(e, 'skills')}>
+            <Link href="/#skills" onClick={handleNavClick}>
               skills
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>
+            <Link href="/#projects" onClick={handleNavClick}>
               projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#experience" onClick={(e) => handleNavClick(e, 'experience')}>
+            <Link href="/#experience" onClick={handleNavClick}>
               experience
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>
+            <Link href="/#contact" onClick={handleNavClick}>
               contact
-            </a>
+            </Link>
           </li>
           <li>
             <Link href="/blog" onClick={handleBlogClick}>

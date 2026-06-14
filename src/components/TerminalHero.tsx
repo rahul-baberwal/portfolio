@@ -20,7 +20,7 @@ function LiquidName({ levelRef }: { levelRef: React.MutableRefObject<number> }) 
   const rafRef    = useRef<number>(0);
   const [paths, setPaths] = useState({ wave: '', fillY: 160 });
 
-  const W = 820, H = 260;
+  const W = 600, H = 260;
 
   useEffect(() => {
     let alive = true;

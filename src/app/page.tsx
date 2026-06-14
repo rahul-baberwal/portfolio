@@ -55,17 +55,7 @@ export default async function HomePage() {
             certification covering a variety of programming language concepts, software
             development, project management, and computer science fundamentals.
           </p>
-          <div className="mt-6">
-            <a
-              href="https://www.instagram.com/rahulbaberwal.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-social-link inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--surface0)] border border-[var(--surface1)] hover:border-[var(--primary)] transition-colors text-[var(--text1)] hover:text-[var(--primary)]"
-            >
-              <i className="fa-brands fa-instagram"></i>
-              Instagram
-            </a>
-          </div>
+
         </div>
         <div className="about-visual">
           <DoodleAvatar />
@@ -125,13 +115,13 @@ export default async function HomePage() {
           
           <div className="contact-socials flex justify-center gap-4 mt-8 flex-wrap">
             <a
-              href="https://www.linkedin.com/in/rahul-baberwal/"
+              href="https://gitlab.com/rahul-baberwal"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-social-link flex items-center gap-2"
             >
-              <i className="fa-brands fa-linkedin"></i>
-              LinkedIn
+              <i className="fa-brands fa-gitlab"></i>
+              GitLab
             </a>
             <a
               href="https://github.com/rahul-baberwal"
@@ -143,13 +133,13 @@ export default async function HomePage() {
               GitHub
             </a>
             <a
-              href="https://gitlab.com/rahul-baberwal"
+              href="https://www.linkedin.com/in/rahul-baberwal/"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-social-link flex items-center gap-2"
             >
-              <i className="fa-brands fa-gitlab"></i>
-              GitLab
+              <i className="fa-brands fa-linkedin"></i>
+              LinkedIn
             </a>
             <a
               href="https://www.facebook.com/rahulbaberwal.in/"

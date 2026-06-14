@@ -8,10 +8,7 @@ export default function Footer() {
   return (
     <footer>
       <span>
-        © {currentYear} Rahul Baberwal — rahulbaberwal.com ·{' '}
-        <a href="/admin" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => (e.currentTarget.style.color = 'var(--accent)')} onMouseOut={(e) => (e.currentTarget.style.color = 'inherit')}>
-          [CMS Portal]
-        </a>
+        © {currentYear} Rahul Baberwal — rahulbaberwal.com
       </span>
       <span className="font-mono text-xs">
         Built with{' '}

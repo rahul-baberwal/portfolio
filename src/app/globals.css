@@ -239,6 +239,21 @@ nav {
 #hamburger.open span:nth-child(2) { opacity: 0; left: -60px; }
 #hamburger.open span:nth-child(3) { top: 9px; transform: rotate(-135deg); }
 
+/* Mobile Backdrop */
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* Mobile Menu Drawer */
 #mobile-menu {
   position: fixed;
@@ -386,6 +401,31 @@ nav {
   gap: 1rem;
 }
 
+@media (max-width: 768px) {
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 1rem;
+  }
+  .btn-primary, .btn-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+  }
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -397,6 +437,7 @@ nav {
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
+  white-space: nowrap;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
@@ -419,6 +460,7 @@ nav {
   border-radius: 8px;
   font-weight: 500;
   font-size: 0.95rem;
+  white-space: nowrap;
   border: 1px solid var(--border);
   transition: all 0.3s ease;
   cursor: pointer;
@@ -980,6 +1022,75 @@ nav {
   color: var(--accent);
   border-color: var(--accent);
   text-shadow: 0 0 20px rgba(108, 99, 255, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(108, 99, 255, 0.4);
+}
+
+/* ─────────────────────────────────────────────
+   Page Transition Loader
+───────────────────────────────────────────── */
+.page-swipe-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  pointer-events: none;
+}
+
+.page-swipe-loader.slide-up {
+  transform: translateY(-100%);
+}
+
+.swipe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.swipe-orb {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent2));
+  box-shadow: 0 0 30px var(--glow);
+  animation: orbPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes orbPulse {
+  0% { transform: scale(0.8); opacity: 0.7; }
+  100% { transform: scale(1.2); opacity: 1; }
+}
+
+.swipe-logo {
+  font-family: var(--font-geist-sans);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: var(--text);
+}
+
+.swipe-logo span {
+  color: var(--accent);
+}
+
+.template-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s; /* wait for swipe to start clearing */
+}
+
+.template-fade-in.fade-in-active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .contact-social-link {
@@ -1767,27 +1878,45 @@ pre:hover .copy-btn {
 /* ── Responsive: stack on mobile ── */
 @media (max-width: 768px) {
   .timeline-beam {
-    left: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
   }
   .tl-item,
   .tl-left,
   .tl-right {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
     grid-template-areas: none;
     grid-template-columns: none;
+    
+    /* Sticky Stacking Cards for Mobile */
+    position: sticky;
+    top: calc(80px + var(--tl-index, 0) * 15px);
+    margin-bottom: 3rem;
+    z-index: calc(10 + var(--tl-index, 0));
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .tl-connector {
+    display: none;
   }
   .tl-dot {
     width: 38px;
     height: 38px;
     font-size: 0.85rem;
     flex-shrink: 0;
-    margin-top: 0.2rem;
+    margin-top: 0;
+    background: var(--bg);
+    z-index: 2;
   }
   .tl-card {
-    flex: 1;
+    width: 100%;
+    flex: none;
+    background: var(--card);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(255,255,255,0.05);
   }
   .tl-badge { font-size: 1.8rem; }
 }
