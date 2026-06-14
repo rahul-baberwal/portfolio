@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# The Next.js Netlify plugin handles Next.js SSR/ISR routing and functions.
+# Netlify auto-installs this, but specifying it here guarantees it runs.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
