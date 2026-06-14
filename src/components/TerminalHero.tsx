@@ -263,13 +263,15 @@ export default function TerminalHero() {
 
       {/* Side social buttons */}
       <div className="hero-socials">
-        {[
-          ['github',   'fa-brands fa-github'],
-          ['gitlab',   'fa-brands fa-gitlab'],
-          ['linkedin', 'fa-brands fa-linkedin-in'],
-          ['facebook', 'fa-brands fa-facebook-f'],
-          ['email',    'fa-regular fa-envelope'],
-        ].map(([key, icon]) => (
+        {(
+          [
+            ['github', 'fa-brands fa-github'],
+            ['gitlab', 'fa-brands fa-gitlab'],
+            ['linkedin', 'fa-brands fa-linkedin-in'],
+            ['facebook', 'fa-brands fa-facebook-f'],
+            ['email', 'fa-regular fa-envelope'],
+          ] as const
+        ).map(([key, icon]) => (
           <button key={key} className="social-link" onClick={() => runSocialTerminal(key)} title={key}>
             <i className={`${icon} text-[18px]`} />
           </button>
