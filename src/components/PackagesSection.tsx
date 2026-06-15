@@ -61,7 +61,11 @@ export default function PackagesSection({ packages }: PackagesSectionProps) {
                 <div className="flex justify-between items-start mb-6">
                   <div className="h-12 w-12 rounded-xl bg-[var(--bg3)] border border-[var(--border)] flex items-center justify-center p-2 shadow-inner">
                     {pkg.logo_url ? (
-                      <img src={pkg.logo_url} alt={pkg.title} className="max-w-full max-h-full object-contain" />
+                      <img 
+                        src={pkg.logo_url.startsWith('http') || pkg.logo_url.startsWith('/') ? pkg.logo_url : `/packages/${pkg.logo_url}`} 
+                        alt={pkg.title} 
+                        className="max-w-full max-h-full object-contain" 
+                      />
                     ) : (
                       <i className="fa-solid fa-box text-2xl text-[var(--text2)]"></i>
                     )}
