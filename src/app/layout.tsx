@@ -118,9 +118,28 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
-        <link rel="stylesheet" href="/vendor/fa/css/all.min.css" />
-        {/* Devicon — self-hosted for performance */}
-        <link rel="stylesheet" href="/vendor/devicon/devicon.min.css" />
+        {/* Load CSS asynchronously to prevent render-blocking */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var l1 = document.createElement('link');
+                l1.rel = 'stylesheet';
+                l1.href = '/vendor/fa/css/all.min.css';
+                document.head.appendChild(l1);
+
+                var l2 = document.createElement('link');
+                l2.rel = 'stylesheet';
+                l2.href = '/vendor/devicon/devicon.min.css';
+                document.head.appendChild(l2);
+              })();
+            `
+          }}
+        />
+        <noscript>
+          <link rel="stylesheet" href="/vendor/fa/css/all.min.css" />
+          <link rel="stylesheet" href="/vendor/devicon/devicon.min.css" />
+        </noscript>
       </head>
       <body className="antialiased select-none font-sans">
         <ServiceWorkerRegister />
