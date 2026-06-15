@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import TerminalOverlay from '../components/TerminalOverlay';
 import InteractiveEffects from '../components/InteractiveEffects';
 import { PersonJsonLd, FaqJsonLd } from '../components/JsonLd';
+import ServiceWorkerRegister from '../components/ServiceWorkerRegister';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -54,6 +55,8 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
+  appLinks: {},
+  // theme-color is declared via the separate viewport export below
   openGraph: {
     type: 'website',
     url: 'https://rahulbaberwal.com/',
@@ -79,6 +82,17 @@ export const metadata: Metadata = {
   },
 };
 
+// Viewport export — Next.js renders this as <meta name="theme-color"> + <meta name="viewport">
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)',  color: '#0d1117' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,20 +103,27 @@ export default function RootLayout({
       <head>
         <PersonJsonLd />
         <FaqJsonLd />
-        {/* FontAwesome integration for icons */}
+        {/* Font Awesome — self-hosted for performance (no CDN round-trip) */}
         <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          rel="preload"
+          href="/vendor/fa/webfonts/fa-solid-900.woff2"
+          as="font"
+          type="font/woff2"
           crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
         />
-        {/* Devicon integration for skills */}
         <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+          rel="preload"
+          href="/vendor/fa/webfonts/fa-brands-400.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
+        <link rel="stylesheet" href="/vendor/fa/css/all.min.css" />
+        {/* Devicon — self-hosted for performance */}
+        <link rel="stylesheet" href="/vendor/devicon/devicon.min.css" />
       </head>
       <body className="antialiased select-none font-sans">
+        <ServiceWorkerRegister />
         <ThemeProvider>
           <TerminalProvider>
             <InteractiveEffects />

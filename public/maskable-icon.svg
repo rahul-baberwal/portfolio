@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Full-bleed background (required for maskable icons — no transparent edges) -->
+  <rect width="512" height="512" fill="#0d1117"/>
+  <!-- Subtle grid dots within safe zone (512 × 0.8 = 410px, starts at 51px) -->
+  <circle cx="128" cy="128" r="8" fill="#6c63ff" opacity="0.12"/>
+  <circle cx="256" cy="128" r="8" fill="#6c63ff" opacity="0.12"/>
+  <circle cx="384" cy="128" r="8" fill="#6c63ff" opacity="0.12"/>
+  <circle cx="128" cy="256" r="8" fill="#6c63ff" opacity="0.12"/>
+  <circle cx="384" cy="256" r="8" fill="#6c63ff" opacity="0.12"/>
+  <circle cx="128" cy="384" r="8" fill="#6c63ff" opacity="0.12"/>
+  <circle cx="256" cy="384" r="8" fill="#6c63ff" opacity="0.12"/>
+  <circle cx="384" cy="384" r="8" fill="#6c63ff" opacity="0.12"/>
+  <!-- Accent border ring inside safe zone -->
+  <rect x="51" y="51" width="410" height="410" rx="80" fill="none" stroke="#6c63ff" stroke-width="8" opacity="0.35"/>
+  <!-- "rb." logo centred — safe zone: 51px → 461px -->
+  <text
+    x="88"
+    y="320"
+    font-family="'JetBrains Mono', monospace, sans-serif"
+    font-size="224"
+    font-weight="900"
+    fill="#f0f0fa"
+    letter-spacing="-8"
+  >rb<tspan fill="#6c63ff">.</tspan></text>
+</svg>

@@ -122,7 +122,7 @@ function HeroPhoto() {
 
       {/* Actual photo */}
       <img
-        src="/hero-photo.png"
+        src="/hero-photo.webp"
         alt="Rahul Baberwal with headphones"
         className="hps-img"
         loading="eager"

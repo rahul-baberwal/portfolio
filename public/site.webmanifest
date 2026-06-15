@@ -1,19 +1,31 @@
 {
-  "name": "Rahul Baberwal",
-  "short_name": "Rahul",
+  "name": "Rahul Baberwal — Python Backend Developer & AI Engineer",
+  "short_name": "Rahul Baberwal",
+  "description": "Portfolio of Rahul Baberwal — Backend Developer at Groww Per Click, AI Major from IIT Ropar. Specializing in Python, Django, FastAPI & ML.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0d1117",
+  "background_color": "#0d1117",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/maskable-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
     }
-  ],
-  "theme_color": "#0d1117",
-  "background_color": "#0d1117",
-  "display": "standalone"
+  ]
 }

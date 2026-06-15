@@ -51,10 +51,10 @@ export default function PackagesSection({ packages }: PackagesSectionProps) {
           {packages.map((pkg) => (
             <div 
               key={pkg.id} 
-              className="group relative flex flex-col justify-between bg-[var(--bg2)] border border-[var(--border)] rounded-2xl p-8 hover:border-[var(--accent1)] transition-all duration-300 overflow-hidden"
+              className="group relative flex flex-col justify-between bg-[var(--bg2)] border border-[var(--border)] rounded-2xl p-8 hover:border-[var(--accent)] transition-all duration-300 overflow-hidden"
             >
               {/* Background gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent1)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               
               <div className="relative z-10">
                 {/* Header: Logo and Links */}
@@ -69,20 +69,32 @@ export default function PackagesSection({ packages }: PackagesSectionProps) {
                   
                   <div className="flex gap-2">
                     {pkg.github_url && (
-                      <a href={pkg.github_url} target="_blank" rel="noreferrer" className="h-10 w-10 rounded-full bg-[var(--bg3)] border border-[var(--border)] flex items-center justify-center text-[var(--text2)] hover:text-[var(--text)] hover:border-[var(--accent1)] transition-colors">
-                        <i className="fa-brands fa-github"></i>
+                      <a
+                        href={pkg.github_url}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View ${pkg.title} on GitHub`}
+                        className="h-10 w-10 rounded-full bg-[var(--bg3)] border border-[var(--border)] flex items-center justify-center text-[var(--text2)] hover:text-[var(--text)] hover:border-[var(--accent)] transition-colors"
+                      >
+                        <i className="fa-brands fa-github" aria-hidden="true"></i>
                       </a>
                     )}
                     {pkg.docs_url && (
-                      <a href={pkg.docs_url} target="_blank" rel="noreferrer" className="h-10 w-10 rounded-full bg-[var(--bg3)] border border-[var(--border)] flex items-center justify-center text-[var(--text2)] hover:text-[var(--text)] hover:border-[var(--accent2)] transition-colors">
-                        <i className="fa-solid fa-book"></i>
+                      <a
+                        href={pkg.docs_url}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View ${pkg.title} documentation`}
+                        className="h-10 w-10 rounded-full bg-[var(--bg3)] border border-[var(--border)] flex items-center justify-center text-[var(--text2)] hover:text-[var(--text)] hover:border-[var(--accent2)] transition-colors"
+                      >
+                        <i className="fa-solid fa-book" aria-hidden="true"></i>
                       </a>
                     )}
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold font-mono mb-2 group-hover:text-[var(--accent1)] transition-colors">
+                <h3 className="text-2xl font-bold font-mono mb-2 group-hover:text-[var(--accent)] transition-colors">
                   {pkg.title}
                 </h3>
                 <div className="font-mono text-xs text-[var(--text3)] mb-4">
@@ -102,7 +114,7 @@ export default function PackagesSection({ packages }: PackagesSectionProps) {
                       href={pub.platform_url}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--bg3)] border border-[var(--border)] text-xs font-mono hover:bg-[var(--accent1)] hover:text-black hover:border-[var(--accent1)] transition-all"
+                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--bg3)] border border-[var(--border)] text-xs font-mono hover:bg-[var(--accent)] hover:text-white hover:border-[var(--accent)] transition-all"
                     >
                       {pub.icon_class && <i className={pub.icon_class}></i>}
                       {pub.platform_name}

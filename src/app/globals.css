@@ -2912,6 +2912,23 @@ body::before {
   align-items: center;
 }
 
+/* Bottom-edge fade — hides the last ~5px of the photo */
+.hps-scene::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: linear-gradient(
+    to top,
+    var(--bg, #0d0d13) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
 /* Pulsing ambient rings behind photo */
 .hps-ring {
   position: absolute;
@@ -2921,22 +2938,23 @@ body::before {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 0; /* keep rings strictly behind the image */
 }
 
 .hps-ring-1 {
   width: 220px; height: 220px;
   animation: ring-breathe 3s ease-in-out infinite;
-  border-color: rgba(108,99,255,0.25);
+  border-color: rgba(108,99,255,0.06);
 }
 .hps-ring-2 {
   width: 320px; height: 320px;
   animation: ring-breathe 3s ease-in-out infinite 0.5s;
-  border-color: rgba(67,233,123,0.12);
+  border-color: rgba(67,233,123,0.04);
 }
 .hps-ring-3 {
   width: 440px; height: 440px;
   animation: ring-breathe 3s ease-in-out infinite 1s;
-  border-color: rgba(255,101,132,0.08);
+  border-color: rgba(255,101,132,0.03);
 }
 
 @keyframes ring-breathe {
@@ -2961,20 +2979,20 @@ body::before {
    */
   mask-image:
     radial-gradient(
-      ellipse 82% 85% at 50% 32%,
-      black 22%,
-      rgba(0,0,0,0.95) 44%,
-      rgba(0,0,0,0.7)  62%,
-      rgba(0,0,0,0.2)  78%,
+      ellipse 85% 72% at 50% 40%,
+      black 35%,
+      rgba(0,0,0,0.95) 55%,
+      rgba(0,0,0,0.55) 70%,
+      rgba(0,0,0,0.05) 84%,
       transparent      92%
     );
   -webkit-mask-image:
     radial-gradient(
-      ellipse 82% 85% at 50% 32%,
-      black 22%,
-      rgba(0,0,0,0.95) 44%,
-      rgba(0,0,0,0.7)  62%,
-      rgba(0,0,0,0.2)  78%,
+      ellipse 85% 72% at 50% 40%,
+      black 35%,
+      rgba(0,0,0,0.95) 55%,
+      rgba(0,0,0,0.55) 70%,
+      rgba(0,0,0,0.05) 84%,
       transparent      92%
     );
 
@@ -3047,22 +3065,25 @@ body::before {
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
+/* chip-1: model.predict — left side, eye/face level */
 .hps-chip-1 {
-  left: -5px;
-  top: 38%;
+  left: -20px;
+  top: calc(40% + 50px);
   color: var(--accent3);
   animation: chip-bob-l 4.2s ease-in-out infinite;
   border-color: rgba(67,233,123,0.35);
 }
+/* chip-2: Python 3.12 — right side, near top of head */
 .hps-chip-2 {
-  right: -5px;
-  top: 22%;
+  right: 4px;
+  top: calc(22% + 40px);
   color: var(--accent);
   animation: chip-bob-r 5s ease-in-out infinite 0.6s;
 }
+/* chip-3: FastAPI — right side, shoulder/chest area */
 .hps-chip-3 {
-  right: 10%;
-  bottom: 14%;
+  right: 4px;
+  bottom: calc(32% - 30px);
   color: var(--accent2);
   animation: chip-bob-r 4.7s ease-in-out infinite 1.2s;
   border-color: rgba(255,101,132,0.3);
@@ -3082,7 +3103,8 @@ body::before {
   .hps-scene {
     max-width: 300px;
   }
-  .hps-chip-1, .hps-chip-3 { display: none; }
+  /* On mobile keep chip-1 (model.predict) + chip-2 (Python), hide chip-3 (FastAPI) */
+  .hps-chip-3 { display: none; }
   .liquid-name-svg { max-width: 100%; }
 }
 
