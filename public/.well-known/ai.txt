@@ -1,0 +1,5 @@
+# Rahul Baberwal - Portfolio
+# https://rahulbaberwal.com/
+
+User-agent: *
+Allow: /
