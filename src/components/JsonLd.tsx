@@ -35,7 +35,18 @@ export function PersonJsonLd() {
       "https://pypi.org/user/rahulbaberwal/",
       "https://djangopackages.org/profiles/rahul-baberwal/"
     ],
-    "knowsAbout": ["Python", "Django", "FastAPI", "Machine Learning"]
+    "knowsAbout": [
+      "Python",
+      "Django",
+      "FastAPI",
+      "Machine Learning",
+      "Software Engineering",
+      "PostgreSQL",
+      "Docker",
+      "Redis",
+      "Celery",
+      "Artificial Intelligence"
+    ]
   };
 
   return (

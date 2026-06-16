@@ -38,13 +38,24 @@ export const metadata: Metadata = {
     'MGSU Bikaner',
     'AI Engineer',
   ],
-  authors: [{ name: 'Rahul Baberwal' }],
+  authors: [{ name: 'Rahul Baberwal', url: 'https://rahulbaberwal.com' }],
+  creator: 'Rahul Baberwal',
+  publisher: 'Rahul Baberwal',
+  formatDetection: {
+    telephone: false,
+    date: false,
+    address: false,
+    email: false,
+  },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
     canonical: 'https://rahulbaberwal.com/',
+    languages: {
+      'en-US': 'https://rahulbaberwal.com/',
+    },
   },
   icons: {
     icon: [
@@ -61,9 +72,8 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://rahulbaberwal.com/',
     siteName: 'Rahul Baberwal Portfolio',
-    title: 'Rahul Baberwal | Python Backend Developer & AI Engineer',
-    description:
-      'Backend Developer at Groww Per Click. AI Major from IIT Ropar. Building intelligent systems with Python, Django & ML. View my projects.',
+    title: 'Rahul Baberwal | Backend & AI',
+    description: 'Python Backend Developer and AI Engineer. View my portfolio.',
     images: [
       {
         url: 'https://rahulbaberwal.com/og-image/og-banner_facebook_og_1200x630.webp',
@@ -77,7 +87,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Rahul Baberwal | Python Backend Developer & AI Engineer',
     description:
-      'Backend Developer at Groww Per Click. AI Major from IIT Ropar. Building with Python, Django & ML. View my projects.',
+      'Rahul Baberwal is a Python Backend Developer & AI Engineer specializing in Django, FastAPI, and ML. Discover my projects, background, and skills.',
+    site: '@rahulbaberwal',
+    creator: '@rahulbaberwal',
     images: ['https://rahulbaberwal.com/og-image/og-banner_twitter_x_1200x675.webp'],
   },
 };
