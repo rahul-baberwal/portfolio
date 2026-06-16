@@ -6,8 +6,18 @@ import 'highlight.js/styles/github-dark.css';
 
 export default function CodeBlockHelper() {
   useEffect(() => {
-    // 1. Run syntax highlighting
-    hljs.highlightAll();
+    // 1. Run syntax highlighting — wrap in try/catch because hljs unicode
+    //    regex patterns can throw in some JS environments.
+    const codeEls = document.querySelectorAll('.article-content pre code');
+    codeEls.forEach((el) => {
+      if (!(el as HTMLElement).dataset.highlighted) {
+        try {
+          hljs.highlightElement(el as HTMLElement);
+        } catch {
+          // If hljs fails on a specific element, leave it unstyled
+        }
+      }
+    });
 
     // 2. Append Copy Buttons to all code blocks
     const codeBlocks = document.querySelectorAll('.article-content pre');

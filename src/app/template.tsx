@@ -3,29 +3,28 @@
 import React, { useEffect, useState } from 'react';
 
 export default function Template({ children }: { children: React.ReactNode }) {
-  // Check if it's the first load. On server, assume it is.
-  const [isFirstLoad] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return !sessionStorage.getItem('hasLoaded');
-    }
-    return true;
-  });
-
-  const [animating, setAnimating] = useState(!isFirstLoad);
+  // Always start as "first load" on server and initial client render to avoid
+  // hydration mismatches. We read sessionStorage only after mount.
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
+  const [animating, setAnimating] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    if (isFirstLoad) {
-      sessionStorage.setItem('hasLoaded', 'true');
-    } else {
-      // Trigger the slide up animation for subsequent loads
+    // Read sessionStorage after mount to avoid SSR/hydration mismatch
+    const hasLoaded = sessionStorage.getItem('hasLoaded');
+    if (hasLoaded) {
+      // Not the first load — trigger the slide-up animation
+      setIsFirstLoad(false);
+      setAnimating(true);
       const timer = setTimeout(() => {
         setAnimating(false);
       }, 100);
       return () => clearTimeout(timer);
+    } else {
+      sessionStorage.setItem('hasLoaded', 'true');
     }
-  }, [isFirstLoad]);
+  }, []);
 
   return (
     <>
