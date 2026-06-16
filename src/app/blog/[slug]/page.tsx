@@ -6,6 +6,7 @@ import Link from 'next/link';
 import BlogPostClient from '../../../components/BlogPostClient';
 import CodeBlockHelper from '../../../components/CodeBlockHelper';
 import { Metadata } from 'next';
+import Breadcrumbs from '../../../components/Breadcrumbs';
 
 export const dynamic = 'force-dynamic';
 
@@ -89,6 +90,11 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       <BlogPostClient title={post.title} excerpt={post.description}>
         <article className="article-container">
           <header className="article-header">
+            {/* Breadcrumbs */}
+            <div className="mb-6">
+              <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }, { label: post.title }]} />
+            </div>
+
             {/* Back link */}
             <Link href="/blog" className="article-back-link select-none">
               <svg

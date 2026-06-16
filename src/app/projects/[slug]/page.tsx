@@ -5,6 +5,7 @@ import { marked } from 'marked';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import CodeBlockHelper from '../../../components/CodeBlockHelper';
+import Breadcrumbs from '../../../components/Breadcrumbs';
 
 export const dynamic = 'force-dynamic';
 
@@ -68,6 +69,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
       />
       <CodeBlockHelper />
       <div className="max-w-4xl mx-auto px-4 md:px-8">
+        {/* Breadcrumbs */}
+        <div className="mb-6">
+          <Breadcrumbs items={[{ label: 'Projects', href: '/projects' }, { label: project.title }]} />
+        </div>
+
         {/* Back Link */}
         <Link href="/projects" className="article-back-link mb-8 inline-flex items-center gap-2">
           <svg

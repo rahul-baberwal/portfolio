@@ -10,11 +10,17 @@ export const metadata: Metadata = {
   description: 'View the engineering projects built by Rahul Baberwal, featuring Python backends, machine learning recommenders, and hyperlocal APIs.',
 };
 
+import Breadcrumbs from '../../components/Breadcrumbs';
+
 export default async function ProjectsPage() {
   const projects = await getProjects();
 
   return (
     <section className="pt-28 min-h-screen">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 mb-8">
+        <Breadcrumbs items={[{ label: 'Projects' }]} />
+      </div>
+
       <header className="mb-12 text-center select-none">
         <div className="section-label justify-center">&gt; /projects</div>
         <h1 className="section-title">Case Studies & Projects</h1>

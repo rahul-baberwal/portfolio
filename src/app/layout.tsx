@@ -55,6 +55,7 @@ export const metadata: Metadata = {
     canonical: 'https://rahulbaberwal.com/',
     languages: {
       'en-US': 'https://rahulbaberwal.com/',
+      'x-default': 'https://rahulbaberwal.com/',
     },
   },
   icons: {
