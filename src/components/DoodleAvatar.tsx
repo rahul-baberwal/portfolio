@@ -123,6 +123,8 @@ export default function DoodleAvatar() {
             alt="Rahul Baberwal – Backend Developer & AI Engineer"
             className="dav-photo"
             loading="lazy"
+            width={230}
+            height={230}
           />
         </picture>
         {/* Gradient overlay */}

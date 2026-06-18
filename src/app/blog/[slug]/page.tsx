@@ -147,6 +147,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
             <img
               src={post.slug === 'django-celery-redis' ? '/blog/django-celery-redis-cover.png' : post.slug === 'disposable-email-filter' ? '/blog/disposable-email-filter-cover.png' : '/blog/custom-auth-vs-jwt-cover.png'}
               alt={post.title}
+              width={800}
+              height={450}
             />
           </div>
 

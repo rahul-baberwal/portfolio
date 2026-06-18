@@ -65,6 +65,8 @@ export default function PackagesSection({ packages }: PackagesSectionProps) {
                         src={pkg.logo_url.startsWith('http') || pkg.logo_url.startsWith('/') ? pkg.logo_url : `/packages/${pkg.logo_url}`} 
                         alt={pkg.title} 
                         className="max-w-full max-h-full object-contain" 
+                        width={48}
+                        height={48}
                       />
                     ) : (
                       <i className="fa-solid fa-box text-2xl text-[var(--text2)]"></i>

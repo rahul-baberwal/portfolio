@@ -133,7 +133,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         {/* Cover image placeholder / container */}
         {project.cover_image && (
           <div className="article-cover-container mb-12 shadow-lg select-none">
-            <img src={project.cover_image} alt={`${project.title} cover banner`} />
+            <img src={project.cover_image} alt={`${project.title} cover banner`} width={800} height={450} />
           </div>
         )}
 

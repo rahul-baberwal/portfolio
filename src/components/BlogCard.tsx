@@ -26,6 +26,8 @@ export default function BlogCard({ post }: BlogCardProps) {
         <img
           src={post.slug === 'django-celery-redis' ? '/blog/django-celery-redis-cover.png' : post.slug === 'disposable-email-filter' ? '/blog/disposable-email-filter-cover.png' : '/blog/custom-auth-vs-jwt-cover.png'}
           alt={`${post.title} banner`}
+          width={800}
+          height={450}
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.onerror = null;

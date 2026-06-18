@@ -126,6 +126,8 @@ function HeroPhoto() {
         alt="Rahul Baberwal with headphones"
         className="hps-img"
         loading="eager"
+        width={600}
+        height={900}
       />
 
       {/* Scan line sweep */}
