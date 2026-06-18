@@ -3,17 +3,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { staticSkills } from '../lib/static-data';
 
-import {
-  JavascriptIcon,
-  PythonIcon,
-  DjangoIcon,
-  DjangoRestIcon,
-  FastAPIIcon,
-  DockerIcon,
-  PostgreSQLIcon,
-  RedisIcon
-} from './TechIcons';
-
 interface SkillBarItem {
   name: string;
   icon: string;
@@ -32,29 +21,6 @@ const mainSkills: SkillBarItem[] = [
   { name: 'Celery', icon: 'fa-solid fa-bolt', level: '65%' },
   { name: 'Machine Learning', icon: 'fa-solid fa-gears', level: '70%' },
 ];
-
-function getSkillIcon(iconName: string) {
-  switch (iconName) {
-    case 'devicon-javascript-plain':
-      return <JavascriptIcon size={24} />;
-    case 'devicon-python-plain':
-      return <PythonIcon size={24} />;
-    case 'devicon-django-plain':
-      return <DjangoIcon size={24} />;
-    case 'devicon-djangorest-plain':
-      return <DjangoRestIcon size={24} />;
-    case 'devicon-fastapi-plain':
-      return <FastAPIIcon size={24} />;
-    case 'devicon-docker-plain':
-      return <DockerIcon size={24} />;
-    case 'devicon-postgresql-plain':
-      return <PostgreSQLIcon size={24} />;
-    case 'devicon-redis-plain':
-      return <RedisIcon size={24} />;
-    default:
-      return <i className={iconName}></i>;
-  }
-}
 
 export default function HomeSkills() {
   const gridRef = useRef<HTMLDivElement>(null);
@@ -108,7 +74,7 @@ export default function HomeSkills() {
             onMouseMove={handleMouseMove}
           >
             <div className="skill-icon text-white">
-              {getSkillIcon(skill.icon)}
+              <i className={skill.icon}></i>
             </div>
             <div className="skill-name">{skill.name}</div>
             <div className="skill-bar-container">
