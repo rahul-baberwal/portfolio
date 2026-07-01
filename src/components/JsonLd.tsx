@@ -8,12 +8,12 @@ export function PersonJsonLd() {
     "name": "Rahul Baberwal",
     "url": "https://rahulbaberwal.com",
     "image": "https://rahulbaberwal.com/profile.webp",
-    "jobTitle": "Python Backend Developer & AI Engineer",
-    "description": "Backend Developer at Groww Per Click, MSc Computer Science student at MGSU Bikaner, and AI Major from IIT Ropar. Specializing in Python, Django, FastAPI, and Machine Learning.",
+    "jobTitle": "Full Stack Developer & AI Engineer",
+    "description": "Full Stack Developer at AdsToPlay, MSc Computer Science student at MGSU Bikaner, and AI Major from IIT Ropar. Specializing in React, PHP, Python, Django, FastAPI, and Machine Learning.",
     "email": "mailto:im@rahulbaberwal.com",
     "worksFor": {
       "@type": "Organization",
-      "name": "Groww Per Click"
+      "name": "AdsToPlay"
     },
     "alumniOf": [
       {
@@ -67,7 +67,7 @@ export function FaqJsonLd() {
         "name": "Who is Rahul Baberwal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Rahul Baberwal is a Python Backend Developer and AI Engineer. He is an MSc Computer Science student at MGSU Bikaner, and an AI Major from IIT Ropar."
+          "text": "Rahul Baberwal is a Full Stack Developer and AI Engineer. He is an MSc Computer Science student at MGSU Bikaner, and an AI Major from IIT Ropar."
         }
       },
       {
@@ -75,7 +75,7 @@ export function FaqJsonLd() {
         "name": "What does Rahul Baberwal do?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "He specializes in backend development with Python, Django, and FastAPI, as well as Artificial Intelligence and Machine Learning. He currently works as a Python Backend Developer at Groww Per Click."
+          "text": "He specializes in full-stack web development with React, PHP, Python, Django, and FastAPI, as well as Artificial Intelligence and Machine Learning. He currently works as a Full Stack Developer at AdsToPlay."
         }
       },
       {

@@ -120,7 +120,7 @@ export default function DoodleAvatar() {
           <source srcSet="/profile.webp" type="image/webp" />
           <img
             src="/profile.png"
-            alt="Rahul Baberwal – Backend Developer & AI Engineer"
+            alt="Rahul Baberwal – Full Stack Developer & AI Engineer"
             className="dav-photo"
             loading="lazy"
             width={230}
@@ -158,7 +158,7 @@ export default function DoodleAvatar() {
       </div>
       <div className="dav-annotation dav-ann-3">
         <span className="dav-ann-line" />
-        <span className="dav-ann-text">Groww Per Click</span>
+        <span className="dav-ann-text">AdsToPlay</span>
       </div>
 
       {/* ── Tech Badges floating ── */}

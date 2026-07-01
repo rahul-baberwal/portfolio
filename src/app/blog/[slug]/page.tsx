@@ -161,7 +161,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           <div className="mt-12 p-8 border border-[var(--border)] rounded-2xl bg-[var(--bg2)] text-center select-none">
             <h3 className="font-mono font-bold text-lg text-[var(--text)] mb-2">About the Author</h3>
             <p className="text-sm leading-relaxed text-[var(--text2)] max-w-xl mx-auto mb-6">
-              Rahul Baberwal is a Python Backend Developer at Groww Per Click, currently pursuing an
+              Rahul Baberwal is a Full Stack Developer at AdsToPlay, currently pursuing an
               MSc in Computer Science and an AI Major from IIT Ropar. He specializes in designing
               scalable server-side systems, machine learning deployments, and complex background
               pipelines.

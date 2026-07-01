@@ -45,10 +45,8 @@ export default async function HomePage() {
             robust backend development.
           </p>
           <p>
-            Currently working as a Python Backend Developer at Groww Per Click, I specialize in a
-            wide range of technologies — from FastAPI and Django to scikit-learn and data
-            engineering pipelines. I help organizations make an informed decision by handling
-            complex data and processing large amounts of data.
+            Currently working as a Full Stack Developer at AdsToPlay, I specialize in a
+            wide range of technologies — from React and frontend frameworks to PHP, Python, FastAPI, and Django. I help build comprehensive, high-performance web applications and optimize complex data flows.
           </p>
           <p>
             Certified in NIELIT O Level (IT Professional) — a government-recognized IT foundation

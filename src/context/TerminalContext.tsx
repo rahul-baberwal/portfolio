@@ -42,9 +42,10 @@ const gitLines: Record<string, TerminalLine[]> = {
   experience: [
     { text: "git checkout experience", cls: "dim" },
     { text: "Switched to branch 'experience'", cls: "ok" },
-    { text: "git log --oneline -4", cls: "dim" },
-    { text: "a3f12c0  Mohta College, MGSU Bikaner — MSc CS", cls: "branch" },
+    { text: "git log --oneline -5", cls: "dim" },
+    { text: "c5e4d3a  AdsToPlay — Python Backend Dev", cls: "branch" },
     { text: "9b2e441  Groww Per Click — Backend Dev", cls: "branch" },
+    { text: "a3f12c0  Mohta College, MGSU Bikaner — MSc CS", cls: "branch" },
     { text: "→ Timeline loaded", cls: "arrow" },
   ],
   contact: [

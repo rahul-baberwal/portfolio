@@ -5,7 +5,7 @@ import { useTerminal } from '../context/TerminalContext';
 
 const roles = [
   'Aspiring Data Scientist',
-  'Backend Developer',
+  'Full Stack Developer',
   'ML Engineer',
   'AI Enthusiast',
   'Django Developer',
