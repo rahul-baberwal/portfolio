@@ -6,11 +6,30 @@ export function PersonJsonLd() {
     "@type": "Person",
     "@id": "https://rahulbaberwal.com/#person",
     "name": "Rahul Baberwal",
+    "alternateName": [
+      "Rahul Amarpura",
+      "Rahul Baberwal Amarpura",
+      "Rahul Baberwal Amarpura Dham"
+    ],
     "url": "https://rahulbaberwal.com",
     "image": "https://rahulbaberwal.com/profile.webp",
     "jobTitle": "Full Stack Developer & AI Engineer",
-    "description": "Full Stack Developer at AdsToPlay, MSc Computer Science student at MGSU Bikaner, and AI Major from IIT Ropar. Specializing in React, PHP, Python, Django, FastAPI, and Machine Learning.",
+    "description": "Rahul Baberwal — Full Stack Developer at AdsToPlay and AI Engineer originally from Amarpura (Amarpura Dham), Bikaner, Rajasthan. MSc Computer Science student at MGSU Bikaner and AI Major from IIT Ropar.",
     "email": "mailto:im@rahulbaberwal.com",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Amarpura (Amarpura Dham)",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Amarpura Dham",
+        "addressRegion": "Rajasthan",
+        "addressCountry": "India"
+      }
+    },
+    "birthPlace": {
+      "@type": "Place",
+      "name": "Amarpura Dham, Rajasthan, India"
+    },
     "worksFor": {
       "@type": "Organization",
       "name": "AdsToPlay"
@@ -67,7 +86,15 @@ export function FaqJsonLd() {
         "name": "Who is Rahul Baberwal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Rahul Baberwal is a Full Stack Developer and AI Engineer. He is an MSc Computer Science student at MGSU Bikaner, and an AI Major from IIT Ropar."
+          "text": "Rahul Baberwal is a Full Stack Developer and AI Engineer originally from Amarpura (Amarpura Dham), Rajasthan. He is an MSc Computer Science student at MGSU Bikaner, and an AI Major from IIT Ropar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Rahul Baberwal from?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rahul Baberwal is originally from Amarpura, popularly known as Amarpura Dham, in Bikaner, Rajasthan, India."
         }
       },
       {

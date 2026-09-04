@@ -1644,14 +1644,34 @@ pre:hover .copy-btn {
 @media (max-width: 768px) {
   .article-container {
     max-width: 100%;
-    padding: 0 0.85rem;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
     overflow-x: hidden;
+  }
+
+  .article-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 1.65rem;
+    line-height: 1.25;
+    margin-bottom: 0.8rem;
+  }
+
+  .article-cover-container {
+    margin-bottom: 1.8rem;
+    border-radius: 12px;
   }
 
   .article-content {
     font-size: 0.98rem;
     word-break: break-word;
     overflow-wrap: break-word;
+  }
+
+  .article-content p {
+    margin-bottom: 1.25rem;
   }
 
   .article-content pre {
@@ -1663,7 +1683,7 @@ pre:hover .copy-btn {
   .article-content pre code {
     font-size: 0.78rem;
     line-height: 1.5;
-    padding: 2.2rem 0.85rem 0.85rem 0.85rem;
+    padding: 2.2rem 0.75rem 0.75rem 0.75rem;
     white-space: pre;
     word-break: normal;
     word-wrap: normal;

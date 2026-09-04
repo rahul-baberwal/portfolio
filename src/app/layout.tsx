@@ -31,6 +31,10 @@ export const metadata: Metadata = {
     'Rahul Baberwal — Full Stack Developer at AdsToPlay. MSc CS at MGSU Bikaner, AI Major from IIT Ropar. Specializing in React, PHP, Python, Django, FastAPI & ML.',
   keywords: [
     'Rahul Baberwal',
+    'Rahul Amarpura',
+    'Amarpura Dham',
+    'Rahul Baberwal Amarpura',
+    'Rahul Baberwal Amarpura Dham',
     'Full Stack Developer',
     'Django Developer',
     'FastAPI',
@@ -95,7 +99,7 @@ export const metadata: Metadata = {
 // Viewport export — Next.js renders this as <meta name="theme-color"> + <meta name="viewport">
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: dark)',  color: '#0d1117' },
+    { media: '(prefers-color-scheme: dark)', color: '#0d1117' },
     { media: '(prefers-color-scheme: light)', color: '#ffffff' },
   ],
   width: 'device-width',
