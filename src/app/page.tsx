@@ -39,7 +39,7 @@ export default async function HomePage() {
             edge of AI & Web
           </h2>
           <p>
-            I&apos;m Rahul Baberwal, originally from Amarpura (popularly known as Amarpura Dham), Rajasthan. I&apos;m an MSc Computer Science student at Mohta College, MGSU University
+            I&apos;m Rahul Baberwal, an MSc Computer Science student at Mohta College, MGSU University
             Bikaner, and a Major in Artificial Intelligence from IIT Ropar. I&apos;m passionate about
             building intelligent computing systems that blend machine learning algorithms with
             robust backend development.
