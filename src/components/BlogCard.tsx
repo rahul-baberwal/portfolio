@@ -24,7 +24,7 @@ export default function BlogCard({ post }: BlogCardProps) {
       <div className="blog-card-image">
         {/* Fallback pattern to base64 placeholder if image fails */}
         <img
-          src={post.slug === 'django-celery-redis' ? '/blog/django-celery-redis-cover.png' : post.slug === 'disposable-email-filter' ? '/blog/disposable-email-filter-cover.png' : '/blog/custom-auth-vs-jwt-cover.png'}
+          src={post.slug === 'django-celery-redis' ? '/blog/django-celery-redis-cover.webp' : post.slug === 'disposable-email-filter' ? '/blog/disposable-email-filter-cover.webp' : '/blog/custom-auth-vs-jwt-cover.webp'}
           alt={`${post.title} banner`}
           width={800}
           height={450}

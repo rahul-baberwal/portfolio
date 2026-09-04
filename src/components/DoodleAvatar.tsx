@@ -119,7 +119,7 @@ export default function DoodleAvatar() {
         <picture>
           <source srcSet="/profile.webp" type="image/webp" />
           <img
-            src="/profile.png"
+            src="/profile.webp"
             alt="Rahul Baberwal – Full Stack Developer & AI Engineer"
             className="dav-photo"
             loading="lazy"

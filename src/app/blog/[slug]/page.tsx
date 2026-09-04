@@ -25,6 +25,9 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
   return {
     title: `${post.title} | Rahul Baberwal Blog`,
     description: post.description,
+    alternates: {
+      canonical: `https://rahulbaberwal.com/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -34,7 +37,7 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
       url: `https://rahulbaberwal.com/blog/${post.slug}`,
       images: [
         {
-          url: `https://rahulbaberwal.com/blog/${post.slug}-cover.png`,
+          url: `https://rahulbaberwal.com/blog/${post.slug}-cover.webp`,
           alt: post.title,
         },
       ],
@@ -43,7 +46,7 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: [`https://rahulbaberwal.com/blog/${post.slug}-cover.png`],
+      images: [`https://rahulbaberwal.com/blog/${post.slug}-cover.webp`],
     },
   };
 }
@@ -72,7 +75,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.description,
-    "image": `https://rahulbaberwal.com/blog/${post.slug}-cover.png`,
+    "image": `https://rahulbaberwal.com/blog/${post.slug}-cover.webp`,
     "datePublished": post.published_at,
     "dateModified": post.updated_at,
     "author": {
@@ -145,7 +148,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           {/* Cover image placeholder */}
           <div className="article-cover-container shadow-lg select-none">
             <img
-              src={post.slug === 'django-celery-redis' ? '/blog/django-celery-redis-cover.png' : post.slug === 'disposable-email-filter' ? '/blog/disposable-email-filter-cover.png' : '/blog/custom-auth-vs-jwt-cover.png'}
+              src={post.slug === 'django-celery-redis' ? '/blog/django-celery-redis-cover.webp' : post.slug === 'disposable-email-filter' ? '/blog/disposable-email-filter-cover.webp' : '/blog/custom-auth-vs-jwt-cover.webp'}
               alt={post.title}
               width={800}
               height={450}

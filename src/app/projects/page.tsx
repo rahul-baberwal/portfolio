@@ -8,6 +8,9 @@ export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Projects | Rahul Baberwal - Python Backend & AI Engineer',
   description: 'View the engineering projects built by Rahul Baberwal, featuring Python backends, machine learning recommenders, and hyperlocal APIs.',
+  alternates: {
+    canonical: 'https://rahulbaberwal.com/projects',
+  },
 };
 
 import Breadcrumbs from '../../components/Breadcrumbs';

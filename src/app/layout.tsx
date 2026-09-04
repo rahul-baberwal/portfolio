@@ -25,6 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rahulbaberwal.com'),
   title: 'Rahul Baberwal | Full Stack Developer & AI Engineer',
   description:
     'Rahul Baberwal — Full Stack Developer at AdsToPlay. MSc CS at MGSU Bikaner, AI Major from IIT Ropar. Specializing in React, PHP, Python, Django, FastAPI & ML.',
@@ -52,11 +53,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://rahulbaberwal.com/',
-    languages: {
-      'en-US': 'https://rahulbaberwal.com/',
-      'x-default': 'https://rahulbaberwal.com/',
-    },
+    canonical: 'https://rahulbaberwal.com',
   },
   icons: {
     icon: [

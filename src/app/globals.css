@@ -1539,23 +1539,55 @@ footer {
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
   font-size: 0.9rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .article-content pre {
   margin: 1.5rem 0;
   border: 1px solid var(--border);
   border-radius: 10px;
-  overflow: hidden;
+  overflow-x: auto;
+  max-width: 100%;
+  position: relative;
+  background: #0a0a0f;
+  -webkit-overflow-scrolling: touch;
 }
 
 .article-content pre code {
   display: block;
-  padding: 1.2rem;
+  padding: 2.2rem 1.25rem 1.25rem 1.25rem;
   overflow-x: auto;
   background: #0a0a0f !important;
   color: #f0f0fa;
   font-size: 0.88rem;
   line-height: 1.6;
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom horizontal scrollbar for pre blocks */
+.article-content pre::-webkit-scrollbar,
+.article-content pre code::-webkit-scrollbar {
+  height: 6px;
+}
+
+.article-content pre::-webkit-scrollbar-track,
+.article-content pre code::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+.article-content pre::-webkit-scrollbar-thumb,
+.article-content pre code::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.article-content pre::-webkit-scrollbar-thumb:hover,
+.article-content pre code::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 
 .article-content ul, .article-content ol {
@@ -1607,6 +1639,51 @@ footer {
 
 pre:hover .copy-btn {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .article-container {
+    max-width: 100%;
+    padding: 0 0.85rem;
+    overflow-x: hidden;
+  }
+
+  .article-content {
+    font-size: 0.98rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .article-content pre {
+    margin: 1.2rem 0;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+
+  .article-content pre code {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    padding: 2.2rem 0.85rem 0.85rem 0.85rem;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
+  }
+
+  .copy-btn {
+    opacity: 0.9;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+    top: 6px;
+    right: 6px;
+  }
+
+  .article-content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .copy-btn:hover {

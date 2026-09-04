@@ -24,6 +24,9 @@ export async function generateMetadata({ params }: ProjectDetailPageProps): Prom
   return {
     title: `${project.title} | Rahul Baberwal Case Study`,
     description: project.tagline,
+    alternates: {
+      canonical: `https://rahulbaberwal.com/projects/${project.slug}`,
+    },
     openGraph: {
       title: `${project.title} | Rahul Baberwal`,
       description: project.tagline,

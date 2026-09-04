@@ -352,7 +352,7 @@ You cannot manage what you do not measure. In production, you need real-time das
 pip install flower
 
 # Run Flower dashboard (binds to port 5555)
-celery -A myproject flower --port=5555 --basic_auth=admin:gR0wwPerCl1ck!
+celery -A myproject flower --port=5555 --basic_auth=admin:your_secure_password
 \`\`\`
 
 Expose Flower through a Nginx reverse proxy secured by basic authentication, allowing you to trace worker CPU utilization, active workloads, and task failures instantly.
