@@ -6,7 +6,7 @@ export const staticExperiences: Experience[] = [
     date: 'Jul 2026 – Present',
     title: 'Software Developer',
     company: 'AdsToPlay',
-    description: 'Designing and building high-performance full-stack web applications, REST APIs, and interactive interfaces. Leveraging React, PHP, Python, and modern web technologies to optimize game and ad tech platforms.',
+    description: 'Software Developer building web applications, REST APIs, and interactive interfaces. Leveraging React, PHP, Python, and modern web technologies to optimize game and ad tech platforms.',
   },
   {
     id: 'exp2',
