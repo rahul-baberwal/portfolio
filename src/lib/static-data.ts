@@ -4,7 +4,7 @@ export const staticExperiences: Experience[] = [
   {
     id: 'exp1',
     date: 'Jul 2026 – Present',
-    title: 'Full Stack Developer',
+    title: 'Software Developer',
     company: 'AdsToPlay',
     description: 'Designing and building high-performance full-stack web applications, REST APIs, and interactive interfaces. Leveraging React, PHP, Python, and modern web technologies to optimize game and ad tech platforms.',
   },
