@@ -45,7 +45,7 @@ export default async function HomePage() {
             robust backend development.
           </p>
           <p>
-            Currently working as a Full Stack Developer at AdsToPlay, I specialize in a
+            Currently working as a Software Developer at AdsToPlay (in a full-stack capacity), I specialize in a
             wide range of technologies — from React and frontend frameworks to PHP, Python, FastAPI, and Django. I help build comprehensive, high-performance web applications and optimize complex data flows.
           </p>
           <p>
@@ -115,7 +115,7 @@ export default async function HomePage() {
             <a
               href="https://gitlab.com/rahul-baberwal"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               className="contact-social-link flex items-center gap-2"
             >
               <i className="fa-brands fa-gitlab"></i>
@@ -124,7 +124,7 @@ export default async function HomePage() {
             <a
               href="https://github.com/rahul-baberwal"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               className="contact-social-link flex items-center gap-2"
             >
               <i className="fa-brands fa-github"></i>
@@ -133,7 +133,7 @@ export default async function HomePage() {
             <a
               href="https://www.linkedin.com/in/rahul-baberwal/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               className="contact-social-link flex items-center gap-2"
             >
               <i className="fa-brands fa-linkedin"></i>
@@ -142,7 +142,7 @@ export default async function HomePage() {
             <a
               href="https://www.facebook.com/rahulbaberwal.in/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               className="contact-social-link flex items-center gap-2"
             >
               <i className="fa-brands fa-facebook"></i>
@@ -151,7 +151,7 @@ export default async function HomePage() {
             <a
               href="https://www.instagram.com/rahulbaberwal.in/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               className="contact-social-link flex items-center gap-2"
             >
               <i className="fa-brands fa-instagram"></i>
@@ -160,7 +160,7 @@ export default async function HomePage() {
             <a
               href="https://about.me/rahulbaberwal/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               className="contact-social-link flex items-center gap-2"
             >
               <i className="fa-solid fa-circle-user"></i>

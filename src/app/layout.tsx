@@ -26,9 +26,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rahulbaberwal.com'),
-  title: 'Rahul Baberwal | Full Stack Developer & AI Engineer',
+  title: 'Rahul Baberwal | Software Developer',
   description:
-    'Rahul Baberwal — Full Stack Developer at AdsToPlay. MSc CS at MGSU Bikaner, AI Major from IIT Ropar. Specializing in React, PHP, Python, Django, FastAPI & ML.',
+    'Rahul Baberwal — Software Developer at AdsToPlay. MSc CS at MGSU Bikaner, AI Major from IIT Ropar. Specializing in React, PHP, Python, Django, FastAPI & ML.',
   keywords: [
     'Rahul Baberwal',
     'Rahul Amarpura',
@@ -74,22 +74,22 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://rahulbaberwal.com/',
     siteName: 'Rahul Baberwal Portfolio',
-    title: 'Rahul Baberwal | Full Stack & AI',
-    description: 'Full Stack Developer and AI Engineer. View my portfolio.',
+    title: 'Rahul Baberwal | Software Developer',
+    description: 'Software Developer and AI Engineer. View my portfolio.',
     images: [
       {
         url: 'https://rahulbaberwal.com/og-image/og-banner_facebook_og_1200x630.webp',
         width: 1200,
         height: 630,
-        alt: 'Rahul Baberwal — Full Stack Developer and AI Engineer.',
+        alt: 'Rahul Baberwal — Software Developer and AI Engineer.',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rahul Baberwal | Full Stack Developer & AI Engineer',
+    title: 'Rahul Baberwal | Software Developer',
     description:
-      'Rahul Baberwal is a Full Stack Developer & AI Engineer specializing in React, PHP, Python, Django, FastAPI, and ML. Discover my projects, background, and skills.',
+      'Rahul Baberwal is a Software Developer specializing in React, PHP, Python, Django, FastAPI, and ML. Discover my projects, background, and skills.',
     site: '@rahulbaberwal',
     creator: '@rahulbaberwal',
     images: ['https://rahulbaberwal.com/og-image/og-banner_twitter_x_1200x675.webp'],

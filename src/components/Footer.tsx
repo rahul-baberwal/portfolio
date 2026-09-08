@@ -10,6 +10,14 @@ export default function Footer() {
       <span>
         © {currentYear} Rahul Baberwal — rahulbaberwal.com
       </span>
+      <nav className="footer-social-links flex gap-3 text-xs" aria-label="Social profiles">
+        <a href="https://www.linkedin.com/in/rahul-baberwal/" rel="me" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://github.com/rahul-baberwal" rel="me" target="_blank" aria-label="GitHub">GitHub</a>
+        <a href="https://gitlab.com/rahul-baberwal" rel="me" target="_blank" aria-label="GitLab">GitLab</a>
+        <a href="https://www.instagram.com/rahulbaberwal.in/" rel="me" target="_blank" aria-label="Instagram">Instagram</a>
+        <a href="https://about.me/rahulbaberwal/" rel="me" target="_blank" aria-label="About.me">About.me</a>
+        <a href="https://pypi.org/user/rahulbaberwal/" rel="me" target="_blank" aria-label="PyPI">PyPI</a>
+      </nav>
       <span className="font-mono text-xs">
         Built with{' '}
         <i

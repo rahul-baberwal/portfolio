@@ -4,8 +4,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useTerminal } from '../context/TerminalContext';
 
 const roles = [
-  'Aspiring Data Scientist',
+  'Software Developer',
   'Full Stack Developer',
+  'Aspiring Data Scientist',
   'ML Engineer',
   'AI Enthusiast',
   'Django Developer',
