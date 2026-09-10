@@ -21,22 +21,34 @@ export async function generateMetadata({ params }: ProjectDetailPageProps): Prom
   const project = await getProjectBySlug(slug);
   if (!project) return {};
 
+  // Build a rich ~155-char description: tagline + top tech + author context
+  const techPreview = project.tech_stack.slice(0, 4).join(', ');
+  const richDesc = `${project.tagline} — built with ${techPreview}. A case study by Rahul Baberwal, Software Developer & AI Engineer.`;
+  // Truncate to 160 chars to stay within Google's display window
+  const metaDescription = richDesc.length > 160 ? richDesc.slice(0, 157) + '…' : richDesc;
+
+  // Ensure page title is ≥50 chars — pad with primary tech if title is very short
+  const baseTitle = `${project.title} | Rahul Baberwal Case Study`;
+  const pageTitle = baseTitle.length < 50 && project.tech_stack[0]
+    ? `${project.title} — ${project.tech_stack[0]} | Rahul Baberwal`
+    : baseTitle;
+
   return {
-    title: `${project.title} | Rahul Baberwal Case Study`,
-    description: project.tagline,
+    title: pageTitle,
+    description: metaDescription,
     alternates: {
       canonical: `https://rahulbaberwal.com/projects/${project.slug}`,
     },
     openGraph: {
       title: `${project.title} | Rahul Baberwal`,
-      description: project.tagline,
+      description: metaDescription,
       type: 'article',
       url: `https://rahulbaberwal.com/projects/${project.slug}`,
     },
     twitter: {
       card: 'summary_large_image',
       title: `${project.title} | Rahul Baberwal`,
-      description: project.tagline,
+      description: metaDescription,
     },
   };
 }

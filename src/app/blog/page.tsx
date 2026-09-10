@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'Blog | Rahul Baberwal - Python Backend & AI Engineer',
-  description: 'Deep dives on Python backend development, Django optimization, async Celery queues, ML models, and production DevOps strategies.',
+  description: 'Engineering blog by Rahul Baberwal — deep dives on Python backend development, Django & FastAPI optimization, async Celery queues, ML models, and production DevOps.',
   alternates: {
     canonical: 'https://rahulbaberwal.com/blog',
   },

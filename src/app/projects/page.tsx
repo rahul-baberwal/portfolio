@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'Projects | Rahul Baberwal - Python Backend & AI Engineer',
-  description: 'View the engineering projects built by Rahul Baberwal, featuring Python backends, machine learning recommenders, and hyperlocal APIs.',
+  description: 'Explore engineering projects by Rahul Baberwal — Python backends, ML recommendation engines, hyperlocal APIs, and full-stack web apps built with FastAPI, Django & React.',
   alternates: {
     canonical: 'https://rahulbaberwal.com/projects',
   },

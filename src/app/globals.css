@@ -351,6 +351,20 @@ nav {
   z-index: 2;
 }
 
+/* SEO h1 — genuinely visible heading above the LiquidName SVG.
+   Rendered in the normal document flow so crawlers, SEO tools, and
+   screen readers all recognise it as a real h1. */
+.hero-seo-h1 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 600;
+  font-family: var(--font-mono), monospace;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+}
+
 .hero-right {
   display: flex;
   justify-content: center;

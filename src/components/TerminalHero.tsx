@@ -222,8 +222,8 @@ export default function TerminalHero() {
       <div className="hero-inner">
         {/* ── LEFT: Text ── */}
         <div className="hero-left">
-          {/* SEO / a11y: single h1 per page — visually hidden, liquid SVG is decorative */}
-          <h1 className="sr-only">Rahul Baberwal — Software Developer</h1>
+          {/* SEO / a11y: single h1 per page — visible to crawlers, LiquidName SVG overlays it decoratively */}
+          <h1 className="hero-seo-h1">Rahul Baberwal — Software Developer</h1>
 
           {/* Liquid name */}
           <LiquidName levelRef={levelRef} />

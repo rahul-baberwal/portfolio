@@ -22,15 +22,26 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
   const post = await getPostBySlug(slug);
   if (!post) return {};
 
+  // Trim post title to ≤40 chars so full "<title> | Rahul Baberwal" stays under 60 chars
+  const shortTitle = post.title.length > 40 ? post.title.slice(0, 38) + '…' : post.title;
+  const pageTitle = `${shortTitle} | Rahul Baberwal`;
+
+  // Ensure description is ≥120 chars — pad with tags context if too short
+  let metaDesc = post.description;
+  if (metaDesc.length < 120 && post.tags.length > 0) {
+    metaDesc = `${metaDesc} Topics covered: ${post.tags.join(', ')}.`;
+  }
+  const description = metaDesc.length > 160 ? metaDesc.slice(0, 157) + '…' : metaDesc;
+
   return {
-    title: `${post.title} | Rahul Baberwal Blog`,
-    description: post.description,
+    title: pageTitle,
+    description,
     alternates: {
       canonical: `https://rahulbaberwal.com/blog/${post.slug}`,
     },
     openGraph: {
       title: post.title,
-      description: post.description,
+      description,
       type: 'article',
       publishedTime: post.published_at,
       modifiedTime: post.updated_at,
@@ -45,7 +56,7 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: post.description,
+      description,
       images: [`https://rahulbaberwal.com/blog/${post.slug}-cover.webp`],
     },
   };
