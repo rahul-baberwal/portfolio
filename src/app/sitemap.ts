@@ -4,6 +4,7 @@ import { getPosts, getProjects } from '../lib/supabase';
 export const dynamic = 'force-dynamic';
 
 const appSlugs = ['marg', 'black-tile', 'wattwarden'] as const;
+const packageSlugs = ['django-dynamic-qr'] as const;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPosts();
@@ -43,6 +44,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]);
 
+  // Package detail pages
+  const packageUrls = packageSlugs.map((slug) => ({
+    url: `${baseUrl}/packages/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+
   // Core landing pages
   const staticUrls = [
     {
@@ -65,5 +74,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  return [...staticUrls, ...appUrls, ...postUrls, ...projectUrls];
+  return [...staticUrls, ...appUrls, ...packageUrls, ...postUrls, ...projectUrls];
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Package } from '../lib/types';
 
 interface PackagesSectionProps {
@@ -59,7 +60,7 @@ export default function PackagesSection({ packages }: PackagesSectionProps) {
               <div className="relative z-10">
                 {/* Header: Logo and Links */}
                 <div className="flex justify-between items-start mb-6">
-                  <div className="h-12 w-12 rounded-xl bg-[var(--bg3)] border border-[var(--border)] flex items-center justify-center p-2 shadow-inner">
+                  <div className="h-12 w-12 rounded-xl bg-[var(--bg3)] border border-[var(--border)] flex items-center justify-center p-2 shadow-inner" title={!pkg.logo_url ? 'TODO: package image' : undefined}>
                     {pkg.logo_url ? (
                       <img 
                         src={pkg.logo_url.startsWith('http') || pkg.logo_url.startsWith('/') ? pkg.logo_url : `/packages/${pkg.logo_url}`} 
@@ -69,7 +70,7 @@ export default function PackagesSection({ packages }: PackagesSectionProps) {
                         height={48}
                       />
                     ) : (
-                      <i className="fa-solid fa-box text-2xl text-[var(--text2)]"></i>
+                      <span className="text-[10px] font-mono text-[var(--text3)]">TODO</span>
                     )}
                   </div>
                   
@@ -101,7 +102,13 @@ export default function PackagesSection({ packages }: PackagesSectionProps) {
 
                 {/* Content */}
                 <h3 className="text-2xl font-bold font-mono mb-2 group-hover:text-[var(--accent)] transition-colors">
-                  {pkg.title}
+                  {pkg.slug === 'django-dynamic-qr' ? (
+                    <Link href={`/packages/${pkg.slug}`} className="hover:underline">
+                      {pkg.title}
+                    </Link>
+                  ) : (
+                    pkg.title
+                  )}
                 </h3>
                 <div className="font-mono text-xs text-[var(--text3)] mb-1">
                   $ pip install {pkg.slug}
@@ -131,6 +138,15 @@ export default function PackagesSection({ packages }: PackagesSectionProps) {
               {/* Footer: Publishers */}
               <div className="relative z-10 pt-6 border-t border-[var(--border)]">
                 <div className="flex flex-wrap gap-3">
+                  {pkg.slug === 'django-dynamic-qr' && (
+                    <Link
+                      href={`/packages/${pkg.slug}`}
+                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--accent)] text-white text-xs font-mono hover:opacity-90 transition-opacity"
+                    >
+                      <i className="fa-solid fa-circle-info"></i>
+                      Details
+                    </Link>
+                  )}
                   {pkg.publishers?.map((pub, idx) => (
                     <a 
                       key={idx}

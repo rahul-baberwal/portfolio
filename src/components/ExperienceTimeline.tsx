@@ -103,7 +103,15 @@ export default function ExperienceTimeline() {
                     <i className="fa-solid fa-building" />
                     <span>{exp.company}</span>
                   </div>
-                  <p className="tl-desc">{exp.description}</p>
+                  {exp.bullets && exp.bullets.length > 0 ? (
+                    <ul className="tl-desc list-disc pl-4 space-y-1.5 text-left">
+                      {exp.bullets.map((bullet, idx) => (
+                        <li key={idx}>{bullet}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="tl-desc">{exp.description}</p>
+                  )}
                 </div>
 
                 {/* Floating number badge */}

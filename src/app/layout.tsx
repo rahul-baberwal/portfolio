@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://rahulbaberwal.com'),
   title: 'Rahul Baberwal | Software Developer',
   description:
-    'Software Developer building Android apps (Kotlin), Python backends (Django, FastAPI), and browser-based web tools. Author of open-source Django packages on PyPI.',
+    'Software Developer building Android apps (Kotlin), Python backends (Django, FastAPI), and browser-based web tools. Author of 3 open-source Django packages on PyPI.',
   keywords: [
     'Rahul Baberwal',
     'Software Developer',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     url: 'https://rahulbaberwal.com/',
     siteName: 'Rahul Baberwal Portfolio',
     title: 'Rahul Baberwal | Software Developer',
-    description: 'Software Developer building Android apps (Kotlin), Python backends (Django, FastAPI), and browser-based web tools. Author of open-source Django packages on PyPI.',
+    description: 'Software Developer building Android apps (Kotlin), Python backends (Django, FastAPI), and browser-based web tools. Author of 3 open-source Django packages on PyPI.',
     images: [
       {
         url: 'https://rahulbaberwal.com/og-image/og-banner_facebook_og_1200x630.webp',
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Rahul Baberwal | Software Developer',
     description:
-      'Rahul Baberwal is a Software Developer building Android apps in Kotlin, Python backends with Django and FastAPI, and browser-based web tools for developers and exam aspirants.',
+      'Rahul Baberwal is a Software Developer building Android apps in Kotlin, Python backends with Django and FastAPI, and browser-based web tools for developers and exam aspirants. Author of 3 open-source Django packages on PyPI.',
     site: '@rahulbaberwal',
     creator: '@rahulbaberwal',
     images: ['https://rahulbaberwal.com/og-image/og-banner_twitter_x_1200x675.webp'],

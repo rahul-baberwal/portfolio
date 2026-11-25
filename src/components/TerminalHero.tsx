@@ -236,7 +236,7 @@ export default function TerminalHero() {
             <span className="animate-pulse text-[var(--accent)]">|</span>
             <br /><br />
             <p className="font-sans text-base leading-relaxed text-[var(--text2)] max-w-[480px]">
-              Software Developer · Android (Kotlin) &amp; Python/Django · Web tools for developers and exam aspirants · Open-source author
+              Software Developer · Android (Kotlin) &amp; Python/Django · Web tools for developers and exam aspirants · Author of 3 open-source Django packages
             </p>
           </div>
 

@@ -14,10 +14,7 @@ export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   // Fetch projects (will use Supabase or fallback data automatically)
-  const projects = await getProjects();
-  const featuredProjects = projects.filter((p) => p.featured);
-  const regularProjects = projects.filter((p) => !p.featured);
-  const displayProjects = [...featuredProjects, ...regularProjects].slice(0, 3);
+  const displayProjects = await getProjects();
   
   // Fetch open source packages
   const packages = await getPackages();
@@ -41,17 +38,17 @@ export default async function HomePage() {
             Open-source
           </h2>
           <p>
-            I&apos;m Rahul Baberwal, a Software Developer specialising in native Android development
-            (Kotlin, Jetpack Compose) and Python backends (Django, DRF, FastAPI). I build tools
-            that developers actually ship — from mock-GPS testers to privacy overlays to battery
-            monitors — and Python libraries that make Django projects easier to maintain.
+            I&apos;m Rahul Baberwal, a full-stack developer building SaaS platforms, REST APIs and
+            internal tools, alongside native Android apps (Kotlin, Jetpack Compose) and Python
+            backends (Django, DRF, FastAPI).
           </p>
           <p>
-            Proof of work: 3 published Android apps across multiple stores, 3 open-source packages
-            on PyPI (django-var-cms, django-meta-whatsapp, django-dynamic-qr), browser-based web
-            tools used by developers and exam aspirants (IndexPilot, Patra, Tankan), and a current
-            role as Software Developer at AdsToPlay (Jul 2026 – Present), following backend work at
-            Groww Per Click. My AI Major at IIT Ropar informs how I approach data-heavy problems.
+            Proof of work: 3 published Android apps across multiple stores, 3 open-source Django
+            packages on PyPI (django-dynamic-qr, django-var-cms, django-meta-whatsapp),
+            browser-based web tools used by developers and exam aspirants (IndexPilot, Patra,
+            Tankan), and a current role as Software Developer at AdsToPlay (Jul 2026 – Present),
+            following Full Stack Developer work at Groww Per Click. My AI Major at IIT Ropar
+            informs how I approach data-heavy problems.
           </p>
           <p>
             Open to software, Android, and backend roles, as well as open-source collaborations.

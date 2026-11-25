@@ -747,6 +747,74 @@ JWTs are an excellent choice for microservices architectures where cross-service
 
 export const fallbackProjects: Project[] = [
   {
+    id: 'p2',
+    slug: 'easyspinlaundry',
+    title: 'EasySpin: Hyperlocal Laundry Marketplace',
+    tagline: 'Three-actor platform for customers, stores and riders, with a Django REST Framework backend and a Django admin back-office.',
+    description: `## Summary
+
+EasySpin is a hyperlocal logistics and utility platform designed to resolve laundry constraints for college campuses (originally prototyped for IIT Ropar students). It consists of a unified backend orchestrating REST APIs for Customer, Rider, and Store apps.
+
+## Technical Highlights
+* **Multi-App Backend**: Built with Django Rest Framework, using PostgreSQL to store relation profiles.
+* **Task Queuing**: Dispatched background notifications, SMS receipts, and account syncs using Celery & Redis.
+* **OTP Authentication**: Implemented SMS OTP flows for user logins.
+* **Automated Social Sync**: Integrated WhatsApp Business API for instant ordering updates.
+* **Real-time Map tracking**: WebSockets to track delivery riders on campus maps.`,
+    tech_stack: ['Django', 'DRF', 'PostgreSQL', 'Celery', 'Redis', 'Firebase', 'WebSockets'],
+    github_url: 'https://play.google.com/store/apps/details?id=com.easyspinlaundry.user&pcampaignid=web_share',
+    featured: true,
+    sort_order: 1,
+  },
+  {
+    id: 'p4',
+    slug: 'lab-report-generation-saas',
+    title: 'Lab Report Generation SaaS',
+    tagline: 'Web-based SaaS on Django for generating formatted lab reports with role-based access.',
+    description: '',
+    tech_stack: ['Django', 'SaaS', 'RBAC'],
+    label: 'Built at Groww Per Click',
+    no_link: true,
+    featured: false,
+    sort_order: 2,
+  },
+  {
+    id: 'p5',
+    slug: 'lead-inventory-raw-material-saas',
+    title: 'Lead, Inventory & Raw Material Management SaaS',
+    tagline: 'Web-based business-management SaaS on Django: lead generation and management, stock/inventory control and raw-material management with dashboards.',
+    description: '',
+    tech_stack: ['Django', 'SaaS', 'CRM', 'Inventory'],
+    label: 'Built at Groww Per Click',
+    no_link: true,
+    featured: false,
+    sort_order: 3,
+  },
+  {
+    id: 'p6',
+    slug: 'adstoplay-internal-tools',
+    title: 'AdsToPlay Internal Tools',
+    tagline: 'Internal web tools for operations: admin dashboards, workflow automation and data management.',
+    description: '',
+    tech_stack: ['React', 'PHP', 'Python'],
+    label: 'Built at AdsToPlay',
+    no_link: true,
+    featured: false,
+    sort_order: 4,
+  },
+  {
+    id: 'p7',
+    slug: 'bael-leaves',
+    title: 'Bael Leaves',
+    tagline: 'Multilingual spiritual-travel website with inquiry capture and nine-language i18n.',
+    description: '',
+    tech_stack: [],
+    live_url: 'https://baelleaves.com',
+    label: 'Delivered at AdsToPlay',
+    featured: false,
+    sort_order: 5,
+  },
+  {
     id: 'p1',
     slug: 'movie-explorer',
     title: 'Movie Explorer AI',
@@ -764,28 +832,7 @@ An AI-powered movie recommendation platform leveraging a machine learning model 
     github_url: 'https://github.com/rahul-baberwal/Movie-Explorer-Latest',
     cover_image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgODAwIDQ1MCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzExMTExOCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNmM2M2ZmIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9ImJvbGQiPk1vdmllIEV4cGxvcmVyIEFJPC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iNjAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5OWJiIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiI+UGVyc29uYWxpemVkIE1MIFJlY29tbWVuZGF0aW9uIEVuZ2luZTwvdGV4dD48L3N2Zz4=',
     featured: true,
-    sort_order: 1,
-  },
-  {
-    id: 'p2',
-    slug: 'easyspinlaundry',
-    title: 'EasySpin — Hyperlocal Ecosystem',
-    tagline: 'On-demand laundry service platform',
-    description: `## Summary
-
-EasySpin is a hyperlocal logistics and utility platform designed to resolve laundry constraints for college campuses (originally prototyped for IIT Ropar students). It consists of a unified backend orchestrating REST APIs for Customer, Rider, and Store apps at a large scale.
-
-## Technical Highlights
-* **Multi-App Backend**: Built with Django Rest Framework, using PostgreSQL to store relation profiles.
-* **Task Queuing**: Dispatched background notifications, SMS receipts, and account syncs using Celery & Redis.
-* **OTP Authentication**: Implemented SMS OTP flows for user logins.
-* **Automated Social Sync**: Integrated WhatsApp Business API for instant ordering updates.
-* **Real-time Map tracking**: WebSockets to track delivery riders on campus maps.`,
-    tech_stack: ['Django', 'DRF', 'PostgreSQL', 'Celery', 'Redis', 'Firebase', 'WebSockets'],
-    github_url: 'https://play.google.com/store/apps/details?id=com.easyspinlaundry.user&pcampaignid=web_share',
-    cover_image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgODAwIDQ1MCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzExMTExOCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNmM2M2ZmIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9ImJvbGQiPkVhc3lTcGluIExhdW5kcnk8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI2MCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM5OTk5YmIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2Ij5IeXBlcmxvY2FsIERlbGl2ZXJ5IEVjb3N5c3RlbTwvdGV4dD48L3N2Zz4=',
-    featured: true,
-    sort_order: 2,
+    sort_order: 6,
   },
   {
     id: 'p3',
@@ -804,7 +851,7 @@ A modern, responsive college and institution website built with HTML5, CSS3, and
     github_url: 'https://github.com/rahul-baberwal/mycollege1',
     cover_image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgODAwIDQ1MCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzExMTExOCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNmM2M2ZmIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9ImJvbGQiPkNvbGxlZ2UgV2Vic2l0ZTwvdGV4dD48dGV4dCB4PSI1MCUiIHk9IjYwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzk5OTkiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2Ij5Nb2Rlcm4gYW5kIFJlc3BvbnNpdmUgU0NTUzwvdGV4dD48L3N2Zz4=',
     featured: false,
-    sort_order: 3,
+    sort_order: 7,
   },
 ];
 
@@ -814,14 +861,27 @@ export const fallbackExperiences: Experience[] = [
     date: 'Jul 2026 – Present',
     title: 'Software Developer',
     company: 'AdsToPlay',
-    description: 'TODO: Add 2–3 verb-led bullets describing work at AdsToPlay.',
+    description: '',
+    bullets: [
+      'Design and develop web applications, REST APIs and interactive interfaces for game and ad-tech platforms using React, PHP and Python.',
+      'Build internal tools that support day-to-day operations: admin dashboards, workflow automation and data management interfaces used by the team.',
+      'Delivered client websites end to end, including Bael Leaves (baelleaves.com), a multilingual lead-capture website with a circuit catalogue, inquiry form and i18n across nine languages.',
+      'Optimise data flows and application performance across front end and back end.',
+    ],
   },
   {
     id: 'exp2',
     date: 'Aug 2025 – Jun 2026',
-    title: 'Back End Developer',
+    title: 'Full Stack Developer',
     company: 'Groww Per Click',
-    description: 'TODO: Add 2–3 verb-led bullets describing work at Groww Per Click.',
+    description: '',
+    bullets: [
+      "Architected and built the backend of EasySpin, an on-demand laundry marketplace modelled on Zomato's three-sided model: a Django REST Framework API serving customer, store and rider apps, with role-based access control and an end-to-end order lifecycle.",
+      'Developed a Django admin back-office to manage users, stores and riders, covering onboarding, order monitoring and operational controls.',
+      'Built a web-based SaaS on Django for lab report generation: structured data models for tests and results, templated report generation and role-based access.',
+      'Built a web-based business-management SaaS on Django covering lead generation and lead management (CRM-style), stock/inventory management and raw-material management, with modular apps, dashboards and reporting.',
+      'Owned features across REST API design, relational schema design (PostgreSQL), admin dashboards and web UI.',
+    ],
   },
   {
     id: 'exp3',
@@ -832,7 +892,7 @@ export const fallbackExperiences: Experience[] = [
   },
   {
     id: 'exp4',
-    date: 'Completed TODO: add year',
+    date: 'Aug 2024 – Sep 2026 (Completed)',
     title: 'MSc Computer Science (Completed)',
     company: 'Mohta College, MGSU University Bikaner',
     description: 'Completed MSc Computer Science at Mohta College, MGSU University Bikaner, covering algorithms, distributed systems, and advanced software engineering.',
@@ -855,7 +915,22 @@ export const fallbackSkills: SkillCategory[] = [
   {
     title: 'Backend',
     icon: 'fa-solid fa-server',
-    tags: ['Python', 'Django', 'DRF', 'FastAPI', 'PostgreSQL', 'Redis', 'Celery', 'Docker'],
+    tags: [
+      'Python',
+      'Django',
+      'DRF',
+      'FastAPI',
+      'PostgreSQL',
+      'Redis',
+      'Celery',
+      'Docker',
+      'QR codes',
+      'REST API design',
+      'role-based access control (RBAC)',
+      'Django admin customisation',
+      'SaaS application architecture',
+      'relational data modelling',
+    ],
   },
   {
     title: 'AI / Data',
@@ -865,17 +940,33 @@ export const fallbackSkills: SkillCategory[] = [
   {
     title: 'Frontend',
     icon: 'fa-solid fa-code',
-    tags: ['JavaScript', 'React', 'HTML', 'CSS'],
+    tags: ['JavaScript', 'React', 'HTML', 'CSS', 'i18n/localisation'],
   },
   {
     title: 'Tools',
     icon: 'fa-solid fa-screwdriver-wrench',
-    tags: ['Git', 'GitHub', 'GitLab', 'Linux', 'Postman'],
+    tags: ['Git', 'GitHub', 'GitLab', 'Linux', 'Postman', 'workflow automation'],
   },
 ];
 
 
 export const fallbackPackages: Package[] = [
+  {
+    id: 'pkg3',
+    slug: 'django-dynamic-qr',
+    title: 'django-dynamic-qr',
+    description: 'Self-hosted dynamic QR codes for Django: 14 QR types, editable short URLs, scan analytics, access control, bulk export and REST API.',
+    docs_url: 'https://rahul-baberwal.github.io/django-dynamic-qr/',
+    github_url: 'https://github.com/rahul-baberwal/django-dynamic-qr',
+    sort_order: 1,
+    publishers: [
+      {
+        platform_name: 'PyPI',
+        platform_url: 'https://pypi.org/project/django-dynamic-qr/',
+        icon_class: 'fa-brands fa-python',
+      },
+    ],
+  },
   {
     id: 'pkg1',
     slug: 'django-var-cms',
@@ -884,7 +975,7 @@ export const fallbackPackages: Package[] = [
     docs_url: 'https://pypi.org/project/django-var-cms/',
     github_url: 'https://github.com/rahul-baberwal/django-var-cms',
     logo_url: '/packages/django-var-cms.webp',
-    sort_order: 1,
+    sort_order: 2,
     publishers: [
       {
         platform_name: 'PyPI',
@@ -901,27 +992,11 @@ export const fallbackPackages: Package[] = [
     docs_url: 'https://pypi.org/project/django-meta-whatsapp/',
     github_url: 'https://github.com/rahul-baberwal/django-meta-whatsapp',
     logo_url: '/packages/django-meta-whatsapp.webp',
-    sort_order: 2,
-    publishers: [
-      {
-        platform_name: 'PyPI',
-        platform_url: 'https://pypi.org/project/django-meta-whatsapp/',
-        icon_class: 'fa-brands fa-python',
-      },
-    ],
-  },
-  {
-    id: 'pkg3',
-    slug: 'django-dynamic-qr',
-    title: 'django-dynamic-qr',
-    description: 'Generate and serve dynamic QR codes from Django views or templates with zero config.',
-    docs_url: 'https://pypi.org/project/django-dynamic-qr/',
-    github_url: 'https://github.com/rahul-baberwal/django-dynamic-qr',
     sort_order: 3,
     publishers: [
       {
         platform_name: 'PyPI',
-        platform_url: 'https://pypi.org/project/django-dynamic-qr/',
+        platform_url: 'https://pypi.org/project/django-meta-whatsapp/',
         icon_class: 'fa-brands fa-python',
       },
     ],

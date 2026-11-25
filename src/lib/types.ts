@@ -23,6 +23,8 @@ export interface Project {
   cover_image?: string;
   featured: boolean;
   sort_order: number;
+  label?: string;
+  no_link?: boolean;
 }
 
 export interface Experience {
@@ -31,6 +33,7 @@ export interface Experience {
   title: string;
   company: string;
   description: string;
+  bullets?: string[];
 }
 
 export interface SkillCategory {

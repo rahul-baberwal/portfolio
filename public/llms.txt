@@ -6,7 +6,7 @@
 - [Software Developer](https://rahulbaberwal.com) specialising in Android (Kotlin) and Python/Django backends
 - [AdsToPlay](https://adstoplay.com/): Software Developer (Jul 2026 – Present)
 - [IIT Ropar](https://www.iitrpr.ac.in/): Artificial Intelligence Major (Completed)
-- [Mohta College](https://mohtacollege.com/): MSc Computer Science (Completed)
+- [Mohta College](https://mohtacollege.com/): MSc Computer Science (Aug 2024 – Sep 2026, Completed)
 
 ## Technical Skills
 - Mobile: [Kotlin](https://kotlinlang.org/), [Jetpack Compose](https://developer.android.com/jetpack/compose), [Android SDK](https://developer.android.com/), Room, WorkManager, MapLibre
@@ -26,14 +26,18 @@
 - [Tankan](https://tankan.rahulbaberwal.com): Free offline typing test practice for Indian government exams (English and Hindi), commission-style scoring.
 
 ## Open-Source PyPI Packages
+- [django-dynamic-qr](https://rahulbaberwal.com/packages/django-dynamic-qr): Self-hosted dynamic QR codes for Django: 14 QR types, editable short URLs, scan analytics, access control, bulk export and REST API.
 - [django-var-cms](https://pypi.org/project/django-var-cms/): Manage dynamic site-wide variables from the Django admin.
 - [django-meta-whatsapp](https://pypi.org/project/django-meta-whatsapp/): WhatsApp-optimised Open Graph meta tags for Django.
-- [django-dynamic-qr](https://pypi.org/project/django-dynamic-qr/): Generate and serve dynamic QR codes from Django views.
 
 ## Featured Projects
-- [EasySpin — Hyperlocal Ecosystem](https://play.google.com/store/apps/details?id=com.easyspinlaundry.user&pcampaignid=web_share): Unified backend orchestrating REST APIs for Customer, Rider, and Store apps
-- [Movie Explorer AI](https://github.com/rahul-baberwal/Movie-Explorer-Latest): AI-powered movie recommendation platform with real-time fuzzy search
-- [College Website](https://github.com/rahul-baberwal/mycollege1): Modern, responsive college institution website built with HTML and SCSS
+- [EasySpin: Hyperlocal Laundry Marketplace](https://play.google.com/store/apps/details?id=com.easyspinlaundry.user&pcampaignid=web_share): Three-actor platform for customers, stores and riders, with a Django REST Framework backend and a Django admin back-office.
+- Lab Report Generation SaaS: Web-based SaaS on Django for generating formatted lab reports with role-based access (Built at Groww Per Click).
+- Lead, Inventory & Raw Material Management SaaS: Web-based business-management SaaS on Django for lead generation, stock/inventory control and raw-material management (Built at Groww Per Click).
+- AdsToPlay Internal Tools: Internal web tools for operations: admin dashboards, workflow automation and data management (Built at AdsToPlay).
+- [Bael Leaves](https://baelleaves.com): Multilingual spiritual-travel website with inquiry capture and nine-language i18n (Delivered at AdsToPlay).
+- [Movie Explorer AI](https://github.com/rahul-baberwal/Movie-Explorer-Latest): AI-powered movie recommendation platform with real-time fuzzy search.
+- [College Website](https://github.com/rahul-baberwal/mycollege1): Modern, responsive college institution website built with HTML and SCSS.
 
 ## Contact & Links
 - [Email](mailto:im@rahulbaberwal.com): Direct contact via email
