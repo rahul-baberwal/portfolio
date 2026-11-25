@@ -103,9 +103,26 @@ export default function PackagesSection({ packages }: PackagesSectionProps) {
                 <h3 className="text-2xl font-bold font-mono mb-2 group-hover:text-[var(--accent)] transition-colors">
                   {pkg.title}
                 </h3>
-                <div className="font-mono text-xs text-[var(--text3)] mb-4">
+                <div className="font-mono text-xs text-[var(--text3)] mb-1">
                   $ pip install {pkg.slug}
                 </div>
+                {/* PyPI badge */}
+                {pkg.publishers?.some((p) => p.platform_name === 'PyPI') && (
+                  <a
+                    href={pkg.publishers.find((p) => p.platform_name === 'PyPI')?.platform_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 mb-4 text-xs font-mono text-[var(--accent)] hover:underline"
+                    aria-label={`${pkg.title} on PyPI`}
+                  >
+                    <img
+                      src={`https://img.shields.io/pypi/v/${pkg.slug}.svg?style=flat-square`}
+                      alt={`${pkg.title} PyPI version`}
+                      className="h-4"
+                      loading="lazy"
+                    />
+                  </a>
+                )}
                 <p className="text-[var(--text2)] leading-relaxed mb-8">
                   {pkg.description}
                 </p>

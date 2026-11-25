@@ -5,11 +5,9 @@ import { useTerminal } from '../context/TerminalContext';
 
 const roles = [
   'Software Developer',
-  'Full Stack Developer',
-  'Aspiring Data Scientist',
-  'ML Engineer',
-  'AI Enthusiast',
-  'Django Developer',
+  'Android Developer (Kotlin)',
+  'Python / Django Developer',
+  'Open-source Author',
 ];
 
 // ─────────────────────────────────────────────────────────────
@@ -238,7 +236,7 @@ export default function TerminalHero() {
             <span className="animate-pulse text-[var(--accent)]">|</span>
             <br /><br />
             <p className="font-sans text-base leading-relaxed text-[var(--text2)] max-w-[480px]">
-              MSc Computer Science · IIT Ropar AI · Building intelligent systems with Python, Django &amp; ML.
+              Software Developer · Android (Kotlin) &amp; Python/Django · Web tools for developers and exam aspirants · Open-source author
             </p>
           </div>
 

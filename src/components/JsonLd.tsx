@@ -7,14 +7,12 @@ export function PersonJsonLd() {
     "@id": "https://rahulbaberwal.com/#person",
     "name": "Rahul Baberwal",
     "alternateName": [
-      "Rahul Amarpura",
-      "Rahul Baberwal Amarpura",
-      "Rahul Baberwal Amarpura Dham"
+      "Rahul Baberwal"
     ],
     "url": "https://rahulbaberwal.com",
     "image": "https://rahulbaberwal.com/profile.webp",
     "jobTitle": "Software Developer",
-    "description": "Software Developer at AdsToPlay, MSc Computer Science student at MGSU Bikaner, and AI Major from IIT Ropar. Specializing in React, PHP, Python, Django, FastAPI, and Machine Learning.",
+    "description": "Software Developer building Android apps in Kotlin and Python backends with Django and FastAPI. Author of open-source Django packages on PyPI. Currently at AdsToPlay.",
     "email": "mailto:im@rahulbaberwal.com",
     "homeLocation": {
       "@type": "Place",
@@ -58,12 +56,15 @@ export function PersonJsonLd() {
       "Python",
       "Django",
       "FastAPI",
-      "Machine Learning",
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
       "Software Engineering",
       "PostgreSQL",
       "Docker",
       "Redis",
       "Celery",
+      "Machine Learning",
       "Artificial Intelligence"
     ]
   };
@@ -86,7 +87,7 @@ export function FaqJsonLd() {
         "name": "Who is Rahul Baberwal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Rahul Baberwal is a Software Developer originally from Amarpura (Amarpura Dham), Rajasthan. He is an MSc Computer Science student at MGSU Bikaner, and an AI Major from IIT Ropar."
+          "text": "Rahul Baberwal is a Software Developer building Android apps in Kotlin and Python backends with Django and FastAPI. He is a Major in AI from IIT Ropar and has completed MSc Computer Science at MGSU Bikaner."
         }
       },
       {
@@ -102,7 +103,7 @@ export function FaqJsonLd() {
         "name": "What does Rahul Baberwal do?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "He is a Software Developer specializing in full-stack web development with React, PHP, Python, Django, and FastAPI, as well as Artificial Intelligence and Machine Learning. He currently works at AdsToPlay."
+          "text": "He is a Software Developer specialising in Android (Kotlin) and Python backends (Django, FastAPI). He also authors open-source Django packages on PyPI and currently works at AdsToPlay."
         }
       },
       {
@@ -110,7 +111,7 @@ export function FaqJsonLd() {
         "name": "What are Rahul Baberwal's skills?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "His skills include Python, JavaScript, Django, FastAPI, Docker, PostgreSQL, Redis, Celery, and Machine Learning."
+          "text": "His skills include Python, Django, FastAPI, Kotlin, Android, Jetpack Compose, PostgreSQL, Redis, Celery, Docker, and Machine Learning."
         }
       },
       {

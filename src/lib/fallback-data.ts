@@ -1,4 +1,4 @@
-import { Post, Project, Experience, SkillCategory } from './types';
+import { Post, Project, Experience, SkillCategory, Package } from './types';
 
 export const fallbackPosts: Post[] = [
   {
@@ -812,30 +812,30 @@ export const fallbackExperiences: Experience[] = [
   {
     id: 'exp1',
     date: 'Jul 2026 – Present',
-    title: 'Full Stack Developer',
+    title: 'Software Developer',
     company: 'AdsToPlay',
-    description: 'Designing and building high-performance full-stack web applications, REST APIs, and interactive interfaces. Leveraging React, PHP, Python, and modern web technologies to optimize game and ad tech platforms.',
+    description: 'TODO: Add 2–3 verb-led bullets describing work at AdsToPlay.',
   },
   {
     id: 'exp2',
     date: 'Aug 2025 – Jun 2026',
     title: 'Back End Developer',
     company: 'Groww Per Click',
-    description: 'Building and maintaining scalable backend systems, REST APIs, and server-side logic using Python. Contributing to product infrastructure in a fast-paced fintech environment.',
+    description: 'TODO: Add 2–3 verb-led bullets describing work at Groww Per Click.',
   },
   {
     id: 'exp3',
-    date: 'Aug 2024 – Oct 2025',
+    date: 'Aug 2024 – Oct 2025 (Completed)',
     title: 'Major in Artificial Intelligence',
     company: 'Indian Institute of Technology, Ropar',
-    description: 'Pursuing advanced studies in AI — covering machine learning, deep learning, natural language processing, computer vision, and pattern recognition. Exploring applications like autonomous vehicles, driving car simulations, and collaborating with machine learning engineers.',
+    description: 'Completed an AI Major covering machine learning, deep learning, natural language processing, computer vision, and pattern recognition.',
   },
   {
     id: 'exp4',
-    date: '2024',
-    title: 'MSc Computer Science (ongoing)',
+    date: 'Completed TODO: add year',
+    title: 'MSc Computer Science (Completed)',
     company: 'Mohta College, MGSU University Bikaner',
-    description: 'Pursuing MSc Computer Science at Mohta College, MGSU University Bikaner, covering algorithms, distributed systems, and advanced software engineering.',
+    description: 'Completed MSc Computer Science at Mohta College, MGSU University Bikaner, covering algorithms, distributed systems, and advanced software engineering.',
   },
   {
     id: 'exp5',
@@ -848,23 +848,82 @@ export const fallbackExperiences: Experience[] = [
 
 export const fallbackSkills: SkillCategory[] = [
   {
+    title: 'Mobile',
+    icon: 'fa-solid fa-mobile-screen',
+    tags: ['Kotlin', 'Java', 'Jetpack Compose', 'Android SDK', 'Room', 'WorkManager', 'MapLibre'],
+  },
+  {
+    title: 'Backend',
+    icon: 'fa-solid fa-server',
+    tags: ['Python', 'Django', 'DRF', 'FastAPI', 'PostgreSQL', 'Redis', 'Celery', 'Docker'],
+  },
+  {
+    title: 'AI / Data',
+    icon: 'fa-solid fa-brain',
+    tags: ['scikit-learn', 'Pandas', 'NumPy', 'NLP / SBERT'],
+  },
+  {
     title: 'Frontend',
     icon: 'fa-solid fa-code',
-    tags: ['Python', 'JavaScript', 'HTML5', 'CSS3', 'SCSS'],
-  },
-  {
-    title: 'Backend & Infra',
-    icon: 'fa-solid fa-server',
-    tags: ['Django', 'Django REST', 'FastAPI', 'PostgreSQL', 'Docker', 'Redis', 'Celery', 'Channels'],
-  },
-  {
-    title: 'AI / Data Science',
-    icon: 'fa-solid fa-brain',
-    tags: ['Machine Learning', 'scikit-learn', 'Pandas', 'NumPy', 'Data Visualization', 'NLP / SBERT'],
+    tags: ['JavaScript', 'React', 'HTML', 'CSS'],
   },
   {
     title: 'Tools',
     icon: 'fa-solid fa-screwdriver-wrench',
-    tags: ['Git', 'GitHub', 'GitLab', 'Linux', 'VS Code', 'Postman'],
+    tags: ['Git', 'GitHub', 'GitLab', 'Linux', 'Postman'],
+  },
+];
+
+
+export const fallbackPackages: Package[] = [
+  {
+    id: 'pkg1',
+    slug: 'django-var-cms',
+    title: 'django-var-cms',
+    description: 'Manage dynamic site-wide variables from the Django admin — no code deployments needed.',
+    docs_url: 'https://pypi.org/project/django-var-cms/',
+    github_url: 'https://github.com/rahul-baberwal/django-var-cms',
+    logo_url: '/packages/django-var-cms.webp',
+    sort_order: 1,
+    publishers: [
+      {
+        platform_name: 'PyPI',
+        platform_url: 'https://pypi.org/project/django-var-cms/',
+        icon_class: 'fa-brands fa-python',
+      },
+    ],
+  },
+  {
+    id: 'pkg2',
+    slug: 'django-meta-whatsapp',
+    title: 'django-meta-whatsapp',
+    description: 'Render WhatsApp-optimised Open Graph meta tags from Django views with one mixin.',
+    docs_url: 'https://pypi.org/project/django-meta-whatsapp/',
+    github_url: 'https://github.com/rahul-baberwal/django-meta-whatsapp',
+    logo_url: '/packages/django-meta-whatsapp.webp',
+    sort_order: 2,
+    publishers: [
+      {
+        platform_name: 'PyPI',
+        platform_url: 'https://pypi.org/project/django-meta-whatsapp/',
+        icon_class: 'fa-brands fa-python',
+      },
+    ],
+  },
+  {
+    id: 'pkg3',
+    slug: 'django-dynamic-qr',
+    title: 'django-dynamic-qr',
+    description: 'Generate and serve dynamic QR codes from Django views or templates with zero config.',
+    docs_url: 'https://pypi.org/project/django-dynamic-qr/',
+    github_url: 'https://github.com/rahul-baberwal/django-dynamic-qr',
+    sort_order: 3,
+    publishers: [
+      {
+        platform_name: 'PyPI',
+        platform_url: 'https://pypi.org/project/django-dynamic-qr/',
+        icon_class: 'fa-brands fa-python',
+      },
+    ],
   },
 ];

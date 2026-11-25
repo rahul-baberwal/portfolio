@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
-import { fallbackPosts, fallbackProjects } from './fallback-data';
-import { Post, Project } from './types';
+import { fallbackPosts, fallbackProjects, fallbackPackages } from './fallback-data';
+import { Post, Project, Package } from './types';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
@@ -184,8 +184,8 @@ export async function deleteProject(id: string): Promise<void> {
 /**
  * Fetches all packages, including their publishers, sorted by sort_order.
  */
-export async function getPackages(): Promise<any[]> {
-  if (!supabase) return [];
+export async function getPackages(): Promise<Package[]> {
+  if (!supabase) return fallbackPackages;
   try {
     const { data, error } = await supabase
       .from('packages')
@@ -193,10 +193,11 @@ export async function getPackages(): Promise<any[]> {
       .order('sort_order', { ascending: true });
 
     if (error) throw error;
-    return data || [];
+    const pkgs = (data || []) as Package[];
+    return pkgs.length > 0 ? pkgs : fallbackPackages;
   } catch (err) {
     console.warn('Supabase fetch failed (packages).', err);
-    return [];
+    return fallbackPackages;
   }
 }
 

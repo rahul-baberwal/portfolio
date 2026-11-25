@@ -20,7 +20,7 @@ export default function Navbar() {
 
       // Track active section for anchor links on home page
       if (pathname === '/') {
-        const sections = ['about', 'skills', 'projects', 'experience', 'contact'];
+        const sections = ['about', 'apps', 'tools', 'projects', 'skills', 'experience', 'contact'];
         let current = '';
         
         for (const secId of sections) {
@@ -64,11 +64,20 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-            href="/#skills"
+            href="/#apps"
             onClick={handleNavClick}
-            style={{ color: activeSection === 'skills' ? 'var(--accent)' : '' }}
+            style={{ color: activeSection === 'apps' ? 'var(--accent)' : '' }}
           >
-            skills
+            apps
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#tools"
+            onClick={handleNavClick}
+            style={{ color: activeSection === 'tools' ? 'var(--accent)' : '' }}
+          >
+            tools
           </Link>
         </li>
         <li>
@@ -78,6 +87,15 @@ export default function Navbar() {
             style={{ color: activeSection === 'projects' ? 'var(--accent)' : '' }}
           >
             projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#skills"
+            onClick={handleNavClick}
+            style={{ color: activeSection === 'skills' ? 'var(--accent)' : '' }}
+          >
+            skills
           </Link>
         </li>
         <li>
@@ -145,13 +163,23 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/#skills" onClick={handleNavClick}>
-              skills
+            <Link href="/#apps" onClick={handleNavClick}>
+              apps
+            </Link>
+          </li>
+          <li>
+            <Link href="/#tools" onClick={handleNavClick}>
+              tools
             </Link>
           </li>
           <li>
             <Link href="/#projects" onClick={handleNavClick}>
               projects
+            </Link>
+          </li>
+          <li>
+            <Link href="/#skills" onClick={handleNavClick}>
+              skills
             </Link>
           </li>
           <li>

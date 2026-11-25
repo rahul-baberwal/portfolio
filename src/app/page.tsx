@@ -6,6 +6,8 @@ import ExperienceTimeline from '../components/ExperienceTimeline';
 import DoodleAvatar from '../components/DoodleAvatar';
 import AuroraBg from '../components/AuroraBg';
 import PackagesSection from '../components/PackagesSection';
+import AppsSection from '../components/AppsSection';
+import ToolsSection from '../components/ToolsSection';
 import { getProjects, getPackages } from '../lib/supabase';
 
 export const dynamic = 'force-dynamic';
@@ -34,24 +36,30 @@ export default async function HomePage() {
         <div className="about-text">
           <div className="section-label">About me</div>
           <h2 className="section-title">
-            Building at the
+            Android, Python &amp;
             <br />
-            edge of AI & Web
+            Open-source
           </h2>
           <p>
-            I&apos;m Rahul Baberwal, an MSc Computer Science student at Mohta College, MGSU University
-            Bikaner, and a Major in Artificial Intelligence from IIT Ropar. I&apos;m passionate about
-            building intelligent computing systems that blend machine learning algorithms with
-            robust backend development.
+            I&apos;m Rahul Baberwal, a Software Developer specialising in native Android development
+            (Kotlin, Jetpack Compose) and Python backends (Django, DRF, FastAPI). I build tools
+            that developers actually ship — from mock-GPS testers to privacy overlays to battery
+            monitors — and Python libraries that make Django projects easier to maintain.
           </p>
           <p>
-            Currently working as a Software Developer at AdsToPlay (in a full-stack capacity), I specialize in a
-            wide range of technologies — from React and frontend frameworks to PHP, Python, FastAPI, and Django. I help build comprehensive, high-performance web applications and optimize complex data flows.
+            Proof of work: 3 published Android apps across multiple stores, 3 open-source packages
+            on PyPI (django-var-cms, django-meta-whatsapp, django-dynamic-qr), browser-based web
+            tools used by developers and exam aspirants (IndexPilot, Patra, Tankan), and a current
+            role as Software Developer at AdsToPlay (Jul 2026 – Present), following backend work at
+            Groww Per Click. My AI Major at IIT Ropar informs how I approach data-heavy problems.
           </p>
           <p>
-            Certified in NIELIT O Level (IT Professional) — a government-recognized IT foundation
-            certification covering a variety of programming language concepts, software
-            development, project management, and computer science fundamentals.
+            Open to software, Android, and backend roles, as well as open-source collaborations.
+            Reach me at{' '}
+            <a href="mailto:im@rahulbaberwal.com" className="underline">
+              im@rahulbaberwal.com
+            </a>
+            .
           </p>
 
         </div>
@@ -61,10 +69,16 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* 3. SKILLS SECTION */}
-      <HomeSkills />
+      {/* 3. APPS I'VE SHIPPED SECTION */}
+      <AppsSection />
 
-      {/* 4. PROJECTS SECTION */}
+      {/* 4. TOOLS I'VE BUILT SECTION */}
+      <ToolsSection />
+
+      {/* 5. PACKAGES SECTION */}
+      {packages.length > 0 && <PackagesSection packages={packages} />}
+
+      {/* 5. PROJECTS SECTION */}
       <section id="projects">
         <div className="max-w-6xl mx-auto w-full">
         <div>
@@ -80,10 +94,10 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* 4.5. PACKAGES SECTION */}
-      {packages.length > 0 && <PackagesSection packages={packages} />}
+      {/* 6. SKILLS SECTION */}
+      <HomeSkills />
 
-      {/* 5. EXPERIENCE & TIMELINE SECTION */}
+      {/* 7. EXPERIENCE & TIMELINE SECTION */}
       <section id="experience">
         <div>
           <div className="section-label">Journey</div>
@@ -93,7 +107,7 @@ export default async function HomePage() {
         <ExperienceTimeline />
       </section>
 
-      {/* 6. CONTACT SECTION */}
+      {/* 8. CONTACT SECTION */}
       <section id="contact">
         <div className="contact-bg"></div>
         <div className="contact-content text-center max-w-2xl mx-auto">
@@ -101,11 +115,10 @@ export default async function HomePage() {
           <h2 className="section-title">
             Let&apos;s build something
             <br />
-            intelligent together
+            great together
           </h2>
           <p className="mt-4 leading-relaxed text-[var(--text2)]">
-            Open to internships, collaborations, and full-time roles in data science, AI/ML, or
-            backend development. Let&apos;s connect.
+            Open to software, Android and backend roles, plus collaborations.
           </p>
           <a href="mailto:im@rahulbaberwal.com" className="contact-email select-all inline-block mt-4">
             im@rahulbaberwal.com

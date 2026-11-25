@@ -1,30 +1,39 @@
 # Rahul Baberwal - Portfolio Overview
 
-> A professional portfolio of Rahul Baberwal, showcasing expertise in Backend Engineering (Django/FastAPI), Artificial Intelligence (IIT Ropar), and High-Performance Systems.
+> Software Developer building Android apps (Kotlin/Jetpack Compose), Python backends (Django, DRF, FastAPI), and browser-based web tools for developers and exam aspirants. Author of 3 open-source Django packages on PyPI.
 
 ## Identity & Role
-- [Backend Developer](https://en.wikipedia.org/wiki/Frontend_and_backend) specializing in Django & FastAPI
-- [Data Scientist](https://en.wikipedia.org/wiki/Data_science) focused on Machine Learning & AI
-- [Groww Per Click](https://growwperclick.com/): Current Backend Developer
-- [IIT Ropar](https://www.iitrpr.ac.in/): Artificial Intelligence Major
-- [Mohta College](https://mohtacollege.com/): MSc Computer Science
+- [Software Developer](https://rahulbaberwal.com) specialising in Android (Kotlin) and Python/Django backends
+- [AdsToPlay](https://adstoplay.com/): Software Developer (Jul 2026 – Present)
+- [IIT Ropar](https://www.iitrpr.ac.in/): Artificial Intelligence Major (Completed)
+- [Mohta College](https://mohtacollege.com/): MSc Computer Science (Completed)
 
 ## Technical Skills
-- Languages: [Python](https://www.python.org/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), HTML5, CSS3, SCSS
+- Mobile: [Kotlin](https://kotlinlang.org/), [Jetpack Compose](https://developer.android.com/jetpack/compose), [Android SDK](https://developer.android.com/), Room, WorkManager, MapLibre
+- Languages: [Python](https://www.python.org/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), HTML, CSS
 - Backend Frameworks: [Django](https://www.djangoproject.com/), [Django REST Framework](https://www.django-rest-framework.org/), [FastAPI](https://fastapi.tiangolo.com/)
-- Data & AI: [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning), [scikit-learn](https://scikit-learn.org/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [NLP](https://en.wikipedia.org/wiki/Natural_language_processing)
+- Data & AI: [scikit-learn](https://scikit-learn.org/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [NLP / SBERT](https://www.sbert.net/)
 - Infrastructure & Tools: [PostgreSQL](https://www.postgresql.org/), [Docker](https://www.docker.com/), [Redis](https://redis.io/), [Celery](https://docs.celeryq.dev/), [Linux](https://www.linux.org/), [Git](https://git-scm.com/)
+
+## Published Android Apps
+- [Marg — Fake GPS & Route Mocker](https://rahulbaberwal.com/apps/marg): Native mock-GPS tool for developers and QA testers. Kotlin, Compose, MapLibre.
+- [Black Tile — Software Privacy Display](https://rahulbaberwal.com/apps/black-tile): Movable overlay tiles to hide screen areas. Pure Kotlin, no INTERNET permission.
+- [WattWarden — Battery & Charging Guardian](https://rahulbaberwal.com/apps/wattwarden): Live wattage, battery health, alarms, smart-plug webhooks. GPL-3.0.
+
+## Web Tools
+- [IndexPilot](https://indexpilot.rahulbaberwal.com): Bulk URL submission to Google Indexing API and Bing IndexNow; multi-profile, sitemap parser, local-first.
+- [Patra](https://patrapdf.netlify.app): Convert photos of Aadhaar, PAN, and marksheets to A4 PDFs compressed to exam-portal size limits in the browser.
+- [Tankan](https://tankan.rahulbaberwal.com): Free offline typing test practice for Indian government exams (English and Hindi), commission-style scoring.
+
+## Open-Source PyPI Packages
+- [django-var-cms](https://pypi.org/project/django-var-cms/): Manage dynamic site-wide variables from the Django admin.
+- [django-meta-whatsapp](https://pypi.org/project/django-meta-whatsapp/): WhatsApp-optimised Open Graph meta tags for Django.
+- [django-dynamic-qr](https://pypi.org/project/django-dynamic-qr/): Generate and serve dynamic QR codes from Django views.
 
 ## Featured Projects
 - [EasySpin — Hyperlocal Ecosystem](https://play.google.com/store/apps/details?id=com.easyspinlaundry.user&pcampaignid=web_share): Unified backend orchestrating REST APIs for Customer, Rider, and Store apps
 - [Movie Explorer AI](https://github.com/rahul-baberwal/Movie-Explorer-Latest): AI-powered movie recommendation platform with real-time fuzzy search
 - [College Website](https://github.com/rahul-baberwal/mycollege1): Modern, responsive college institution website built with HTML and SCSS
-
-## Education & Experience
-- [Professional Career](https://growwperclick.com/): Backend Developer at Groww Per Click
-- [Academic Major](https://www.iitrpr.ac.in/): AI Studies at IIT Ropar
-- [Graduate Studies](https://mohtacollege.com/): MSc in Computer Science
-- [Certification](https://www.nielit.gov.in/): NIELIT O Level IT Professional
 
 ## Contact & Links
 - [Email](mailto:im@rahulbaberwal.com): Direct contact via email

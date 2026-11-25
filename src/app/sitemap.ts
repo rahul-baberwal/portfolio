@@ -3,6 +3,8 @@ import { getPosts, getProjects } from '../lib/supabase';
 
 export const dynamic = 'force-dynamic';
 
+const appSlugs = ['marg', 'black-tile', 'wattwarden'] as const;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPosts();
   const projects = await getProjects();
@@ -24,6 +26,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
+
+  // App pages
+  const appUrls = appSlugs.flatMap((slug) => [
+    {
+      url: `${baseUrl}/apps/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/apps/${slug}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.5,
+    },
+  ]);
 
   // Core landing pages
   const staticUrls = [
@@ -47,5 +65,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  return [...staticUrls, ...postUrls, ...projectUrls];
+  return [...staticUrls, ...appUrls, ...postUrls, ...projectUrls];
 }

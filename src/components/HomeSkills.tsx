@@ -10,15 +10,15 @@ interface SkillBarItem {
 }
 
 const mainSkills: SkillBarItem[] = [
-  { name: 'JavaScript', icon: 'devicon-javascript-plain', level: '80%' },
+  { name: 'Kotlin', icon: 'devicon-kotlin-plain', level: '82%' },
   { name: 'Python', icon: 'devicon-python-plain', level: '88%' },
   { name: 'Django', icon: 'devicon-django-plain', level: '78%' },
   { name: 'Django REST', icon: 'devicon-djangorest-plain', level: '72%' },
   { name: 'FastAPI', icon: 'devicon-fastapi-plain', level: '72%' },
+  { name: 'Jetpack Compose', icon: 'fa-solid fa-mobile-screen', level: '75%' },
   { name: 'Docker', icon: 'devicon-docker-plain', level: '65%' },
   { name: 'PostgreSQL', icon: 'devicon-postgresql-plain', level: '70%' },
   { name: 'Redis', icon: 'devicon-redis-plain', level: '65%' },
-  { name: 'Celery', icon: 'fa-solid fa-bolt', level: '65%' },
   { name: 'Machine Learning', icon: 'fa-solid fa-gears', level: '70%' },
 ];
 
