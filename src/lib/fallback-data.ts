@@ -863,10 +863,10 @@ export const fallbackExperiences: Experience[] = [
     company: 'AdsToPlay',
     description: '',
     bullets: [
-      'Design and develop web applications, REST APIs and interactive interfaces for game and ad-tech platforms using React, PHP and Python.',
-      'Build internal tools that support day-to-day operations: admin dashboards, workflow automation and data management interfaces used by the team.',
-      'Delivered client websites end to end, including Bael Leaves (baelleaves.com), a multilingual lead-capture website with a circuit catalogue, inquiry form and i18n across nine languages.',
-      'Optimise data flows and application performance across front end and back end.',
+      'Build web apps, REST APIs and UIs with React, PHP and Python.',
+      'Develop internal admin dashboards, workflow automation and data tools.',
+      'Deliver client sites end to end, including Bael Leaves (9-language i18n).',
+      'Optimise data flows and application performance across the stack.',
     ],
   },
   {
@@ -876,11 +876,11 @@ export const fallbackExperiences: Experience[] = [
     company: 'Groww Per Click',
     description: '',
     bullets: [
-      "Architected and built the backend of EasySpin, an on-demand laundry marketplace modelled on Zomato's three-sided model: a Django REST Framework API serving customer, store and rider apps, with role-based access control and an end-to-end order lifecycle.",
-      'Developed a Django admin back-office to manage users, stores and riders, covering onboarding, order monitoring and operational controls.',
-      'Built a web-based SaaS on Django for lab report generation: structured data models for tests and results, templated report generation and role-based access.',
-      'Built a web-based business-management SaaS on Django covering lead generation and lead management (CRM-style), stock/inventory management and raw-material management, with modular apps, dashboards and reporting.',
-      'Owned features across REST API design, relational schema design (PostgreSQL), admin dashboards and web UI.',
+      "Architected EasySpin's 3-sided DRF backend with RBAC and order lifecycle.",
+      'Built a Django admin back-office for users, stores and riders.',
+      'Built a Django SaaS for lab report generation with RBAC.',
+      'Built a Django CRM, inventory and raw-material management SaaS.',
+      'Owned REST API design, PostgreSQL schemas, admin dashboards and web UI.',
     ],
   },
   {
@@ -892,8 +892,8 @@ export const fallbackExperiences: Experience[] = [
   },
   {
     id: 'exp4',
-    date: 'Aug 2024 – Sep 2026 (Completed)',
-    title: 'MSc Computer Science (Completed)',
+    date: 'Aug 2024 – Sep 2026',
+    title: 'MSc Computer Science',
     company: 'Mohta College, MGSU University Bikaner',
     description: 'Completed MSc Computer Science at Mohta College, MGSU University Bikaner, covering algorithms, distributed systems, and advanced software engineering.',
   },

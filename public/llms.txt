@@ -6,7 +6,7 @@
 - [Software Developer](https://rahulbaberwal.com) specialising in Android (Kotlin) and Python/Django backends
 - [AdsToPlay](https://adstoplay.com/): Software Developer (Jul 2026 – Present)
 - [IIT Ropar](https://www.iitrpr.ac.in/): Artificial Intelligence Major (Completed)
-- [Mohta College](https://mohtacollege.com/): MSc Computer Science (Aug 2024 – Sep 2026, Completed)
+- [Mohta College](https://mohtacollege.com/): MSc Computer Science (Aug 2024 – Sep 2026)
 
 ## Technical Skills
 - Mobile: [Kotlin](https://kotlinlang.org/), [Jetpack Compose](https://developer.android.com/jetpack/compose), [Android SDK](https://developer.android.com/), Room, WorkManager, MapLibre
